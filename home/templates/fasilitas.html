@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brightscope</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="static\style.css">
+</head>
+<style>
+    .container{
+        padding-bottom: 0px;
+    }
+    .toggle-button{
+      margin-right: auto;
+    }
+    .nav-item-medium.active {
+      color: #004aad;
+    }
+    .header-fasilitas{
+        display: flex;
+        height: 498px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin-bottom: 200px;
+    }
+    .fasilitas-image{
+        margin-top: 100px;
+        width: 1500px;
+    }
+    .body-fasilitas{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+    }
+  </style>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
+            <div class="toggle-button">
+              <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
+              <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
+            </div>
+            <div class="nav-item-medium" onclick="navigateTo('/')">Beranda</div>
+            <div class="nav-item-medium" onclick="navigateTo('/')">Tentang Kami</div>
+            <div class="nav-item-medium" onclick="navigateTo('/program')">Program</div>
+            <div class="nav-item-medium active" onclick="navigateTo('/fasilitas')">Fasilitas</div>
+            <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Kontak</div>
+        </div>
+    </div>
+    <div class="header-fasilitas">
+        <img class="fasilitas-image" src="https://i.ibb.co/fNXdhfW/Group-3.png">
+    </div>
+    <div class="body-fasilitas">
+        <img class="body-fasilitas-image" src="https://i.ibb.co/ZMpXM7g/image-1-1.png">
+    </div>
+    <div id="bawah">
+        <div class="header-footer"></div>
+        <div class="footer">
+          <img class="footer-image" src="https://i.ibb.co/wC1Mptc/Brightscope-logo-1.png" alt="Image">
+          <div class="line"></div>
+          <div class="hubungi">
+            <span class="judul-hubungi">Hubungi Kami</span>
+            <div class="isi-hubungi">
+              <span class="telp">Telp: +6281292058377</span>
+              <span class="email">Email: brightscope.islamicschool@gmail.com</span>
+              <span class="instagram">Instagram: @bright.scope</span>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="alamat">
+            <span class="judul-alamat">Alamat</span>
+            <div class="isi-alamat">
+              <span class="isi-judul-alamat">Ruko The Boulevard No,1, Jakarta Garden City, Jakarta Timur, 13910</span>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+<script>
+    function navigateTo(url) {
+      // Perform navigation to the specified URL
+      window.location.href = url;
+    }
+  
+    function scrollToSection(sectionId) {
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  
+    function toggleLanguage(language) {
+      var englishButton = document.getElementById("englishButton");
+      var indonesianButton = document.getElementById("indonesianButton");
+    
+      if (language === "english") {
+        englishButton.classList.add("active");
+        indonesianButton.classList.remove("active");
+        // Code to switch to English language
+      } else if (language === "indonesian") {
+        indonesianButton.classList.add("active");
+        englishButton.classList.remove("active");
+        // Code to switch to Indonesian language
+      }
+    }
+    
+  </script>

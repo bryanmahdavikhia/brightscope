@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "brightscope/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "brightscope/wsgi.py"
+      }
+    ]
+}

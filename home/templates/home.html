@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brightscope</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<style>
+  .toggle-button{
+    margin-right: auto;
+  }
+  .nav-item-medium.active {
+    color: blue;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
+      <div class="toggle-button">
+        <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
+        <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
+      </div>
+      <div class="nav-item-medium active" onclick="navigateTo('/')">Beranda</div>
+      <div class="nav-item-medium" onclick="scrollToSection('#tentang-sekolah')">Tentang Kami</div>
+      <div class="nav-item-medium" onclick="navigateTo('/program')">Program</div>
+      <div class="nav-item-medium" onclick="navigateTo('/fasilitas')">Fasilitas</div>
+      <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Kontak</div>
+    </div>
+    <div class="content-container">
+      <div class="left-content">
+        <div class="title"><h4>Bright Scope Islamic School</h4></div>
+        <div class="subtitle">
+          <h4>
+            <span class="line1">Playgroup. Kindergarten. Course</span>
+            <br>
+            <span class="line2">Fun learn and be a great kids</span>
+          </h4>
+          <a class="button" onclick="scrollToSection('#tentang-sekolah')"><span class="slide">Lihat profil kami</span></a>
+
+        </div>
+        
+        <div class="image-container">
+          <img src="https://file.rendit.io/n/GNbySVugzpad2Z90X7eR.svg" alt="Top Image" class="bottom-image">
+          <img src="https://file.rendit.io/n/IhqFvEeoEmqC4FnjZfBw.svg" alt="Bottom Image" class="top-image">
+        </div>
+      </div>
+      <div class="right-content">
+        <img src="https://file.rendit.io/n/XC5RDwCfNGWSXIRMx254.svg" alt="Right Image" class="right-image">
+      </div>
+    </div>
+  </div>
+  <div id="tentang-sekolah">
+    <div class="body">
+      <h2 class="tentangsekolah">Tentang Sekolah</h2>
+      <img src="https://i.ibb.co/j8pYRF2/Yayasan-logo.png" alt="Image" class="centered-image">
+      <p style = "font-weight: bold">
+        Yayasan MEG membantu optimalisasi tumbuh kembang anak dalam mencapai berbagai tugas perkembangan seperti potensi 
+        <span class="oren">keimanan, emosi, sosial, bahasa, kognitif dan jasmani.</span>
+        Selain itu, Yayasan MEG membantu mengintegerasikan seluruh dimensi perkembangan dan membantu tumbuhkan <span class="oren">karakter Islam.</span>
+      <p>
+    </div>
+  </div>
+  <div class="parent-container">
+    <div class="child-container">
+      <div class="header-container">
+        <img src="https://i.ibb.co/v1H3PDp/lightbulb-outline-24px.png">
+        Visi
+      </div>
+      <div class="body-container">
+          Mendidik individu dengan 
+          <br><span class="oren">integritas</span> dan <span class="oren">keunggulan</span> yang 
+          <br>berwawasan luas di lingkungan
+          <br>tempat belajar yang nyaman 
+          <br>dan bersahabat.
+      </div>
+    </div>
+
+    <div class="child-container">
+      <div class="header-container">
+        <img src="https://i.ibb.co/3WbTdfP/border-color-24px.png">
+        Misi
+      </div>
+      <div class="body-container">
+        Sebagai sekolah islam yang 
+        <br>bertaraf internasional berupaya 
+        <br>mencetak generasi yang unggul 
+        <br>dan berpedoman kepada <span class="oren">6 
+        <br>rukun iman</span> dengan dasar <span class="oren">5 
+        <br>rukun islam</span> yang mempunyai 
+        <br>kepastian 1 tujuan (scope) yaitu 
+        <br>surga-Nya Allah SWT.
+      </div>
+    </div>
+    <div class="child-container">
+      <div class="header-container">
+        <img src="https://i.ibb.co/SxXWJQH/place-24px.png">
+        Tujuan
+      </div>
+      <div class="body-container">
+        1. Menjadi sekolah islam <span class="oren">terbaik</span>
+        <br>bertaraf internasional
+        <br>2. Mewujudkan generasi 
+        <br><span class="oren">berakhlak islam</span>
+        <br>3. Mewujudkan generasi yang 
+        <br>cinta <span class="oren">Al-Qur'an</span>
+      </div>
+    </div>
+  </div>
+  <div class="kurikulum">
+    <div class="isi-kurikulum">
+      <h3>Kurikulum</h3>
+      <div class="point-kurikulum">
+        <img src=https://i.ibb.co/n70BgH6/Frame-15.png>
+        <div class="tulisan-kurikulum">
+          <span class="judul-tulisan-kurikulum">Islamic Bilingual Curriculum</span>
+          <span class="isi-tulisan-kurikulum">
+            Kurikulum Bright Scope menggunakan Islamic bilingual 
+            curriculum yaitu pembelajaran melalui bahasa Indonesia 
+            dan bahasa Inggris dengan menanamkan nilai-nilai islam sejak dini.
+          </span>
+        </div>
+      </div>
+
+      <div class="point-kurikulum">
+        <img src=https://i.ibb.co/r02cLdF/Frame-15-1.png>
+        <div class="tulisan-kurikulum">
+          <span class="judul-tulisan-kurikulum">Metode Pengajaran</span>
+          <span class="isi-tulisan-kurikulum">
+            Metode pembelajaran unggulan Brigth Scope yaitu Learning by doing, 
+            menstimulus para siswa sesuai dengan perkembangannya. 
+            Pembelajaran dilakukan secara Fun Active and Happy Learning.
+          </span>
+        </div>
+      </div>
+      <div class="point-kurikulum">
+        <img src=https://i.ibb.co/whj2sXR/Frame-15-2.png>
+        <div class="tulisan-kurikulum">
+          <span class="judul-tulisan-kurikulum">Nilai-nilai Dasar Karakter Kurikulum</span>
+          <span class="isi-tulisan-kurikulum">
+            <span class="kiri">
+              &#x2022; Bertaqwa (Religious)
+              <br>&#x2022; Tanggung jawab (Responsible)
+              <br>&#x2022; Jujur (Honest)
+              <br>&#x2022; Disiplin (Discipline)
+              <br>&#x2022; Sopan (Polite)
+              <br>&#x2022; Peduli (Care)
+              <br>&#x2022; Sikap yang baik (Good Attitude)
+              <br>&#x2022; Toleransi (Tolarate)
+              <br>&#x2022; Kreatif (Creative)
+            </span>
+            <span class="kanan">
+              &#x2022; Mandiri (Independent)
+              <br>&#x2022; Menghargai (Respect)
+              <br>&#x2022; Bersahabat (Friendly)
+              <br>&#x2022; Cinta damai (Peace Full)
+              <br>&#x2022; Kerja Keras (Hard work)
+              <br>&#x2022; Semangat kebangsaan (Nationality Spirit)
+            </span> 
+          </span>
+        </div>
+      </div>
+      
+    </div>
+    <img class="kurikulum-image" src="https://i.ibb.co/Wg2HqkB/Kurikulum.png" alt="Image">
+  </div>
+
+  <div class="learning-obj">
+      <img class="background-image" src="https://i.ibb.co/XDDc5wM/Vector-1-3.png" alt="Image">
+        <div class="container-learning">
+          <span class="judul-learning">Bright Scope’s 10 Learning Objectives</span>
+          <img class="image-learning" src="https://i.ibb.co/qm5R0QX/Group-2.png" alt="Image">
+        </div>
+  </div>
+  <div class="karakter">
+    <div class="karakter-container">
+      <span class="judul-karakter">Karakter</span>
+      <div class="isi-karakter">
+        <div class="kolom-karakter">
+          <div class="header-kolom">
+            <span class="judul-kolom">Akhlaq Terhadap Pimpinan</span>
+          </div>
+          <div class="body-kolom">
+            <span class="isi-kolom">
+              &#x2022; 5 S (salam, senyum, sapa, sopan dan santun)
+              <br> &#x2022; Tidak menjatuhkan kewibawaan
+              <br> &#x2022; Percaya dengan program yang dibuat
+              <br> &#x2022; Tidak menolak jika dimintai bantuan
+            </span>
+          </div>
+        </div>
+        <div class="kolom-karakter">
+          <div class="header-kolom">
+            <span class="judul-kolom">Akhlaq Terhadap Rekan Kerja</span>
+          </div>
+          <div class="body-kolom">
+            <span class="isi-kolom">
+              &#x2022; 5 S (salam, senyum, sapa, sopan dan santun)
+              <br> &#x2022; Saling mendukung dan memotivasi hal-hal positif
+              <br> &#x2022; Menjaga perasaan orang lain
+           </span>
+          </div>
+        </div>
+      </div>
+      <div class="isi-karakter">
+        <div class="kolom-karakter">
+          <div class="header-kolom">
+            <span class="judul-kolom">Akhlaq Terhadap Siswa</span>
+          </div>
+          <div class="body-kolom">
+            <span class="isi-kolom">
+              &#x2022; Selalu menyapa dengan sapaan yang memotivasi
+              <br> &#x2022; Berlaku sabar dan penuh kasing sayang
+              <br> &#x2022; Tidak membentak, mencela, memukul dan membeda-bedakan siswa
+              <br> &#x2022; Berusaha agar disenangi oleh siswa
+           </span>
+          </div>
+        </div>
+        <div class="kolom-karakter">
+          <div class="header-kolom">
+            <span class="judul-kolom">Akhlaq Terhadap Orang Tua Siswa</span>
+          </div>
+          <div class="body-kolom">
+            <span class="isi-kolom">
+              &#x2022; Menyambut dengan ramah, sopan dan santun
+              <br> &#x2022; Menjalani komunikasi yang harmonis
+              <br> &#x2022; Menjadikan orang tua sebagai mitra
+           </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="program">
+    <div class="program-container">
+      <img class="image-program" src="https://i.ibb.co/yyy91cg/Frame-42.png" alt="Image">
+      <a class="program-button" href="/program"><span class="slide">Lihat program kami</sapn></a>
+    </div>
+  </div>
+
+  <div class="fasilitas">
+    <div class="header-foto">
+      <img src="https://i.ibb.co/MMpx2YG/Frame-41.png" alt="Image">
+    </div>
+    <div class="body-fasilitas">
+      <div class="isi-fasilitas">
+        <div class="tulisan-fasilitas">
+          <span class="judul-fasilitas">Fasilitas Kami</span>
+          <span class="isi-judul-fasilitas">
+            Kami berkomitmen untuk menyediakan 
+            fasilitas terbaik guna memenuhi kebutuhan 
+            si cilik. Fasilitas kami dilengkapi mulai 
+            dari ruang kelas, taman bermain, dan office.   
+          </span>
+        </div>
+        <a class="fasilitas-button" href="/fasilitas"><span class="slide">Lihat fasilitas</sapn></a>
+      </div>
+      <img src="https://i.ibb.co/VvV3TJ8/IMG-0143-1.png" alt="Image">
+    </div>
+  </div>
+
+  <div id="bawah">
+    <div class="header-footer"></div>
+    <div class="footer">
+      <img class="footer-image" src="https://i.ibb.co/wC1Mptc/Brightscope-logo-1.png" alt="Image">
+      <div class="line"></div>
+      <div class="hubungi">
+        <span class="judul-hubungi">Hubungi Kami</span>
+        <div class="isi-hubungi">
+          <span class="telp">Telp: +6281292058377</span>
+          <span class="email">Email: brightscope.islamicschool@gmail.com</span>
+          <span class="instagram">Instagram: @bright.scope</span>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="alamat">
+        <span class="judul-alamat">Alamat</span>
+        <div class="isi-alamat">
+          <span class="isi-judul-alamat">Ruko The Boulevard No,1, Jakarta Garden City, Jakarta Timur, 13910</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  function navigateTo(url) {
+    // Perform navigation to the specified URL
+    window.location.href = url;
+  }
+
+  function scrollToSection(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function toggleLanguage(language) {
+    var englishButton = document.getElementById("englishButton");
+    var indonesianButton = document.getElementById("indonesianButton");
+  
+    if (language === "english") {
+      englishButton.classList.add("active");
+      indonesianButton.classList.remove("active");
+      // Code to switch to English language
+    } else if (language === "indonesian") {
+      indonesianButton.classList.add("active");
+      englishButton.classList.remove("active");
+      // Code to switch to Indonesian language
+    }
+  }
+  
+</script>
+</html>
