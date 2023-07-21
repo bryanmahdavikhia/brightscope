@@ -129,5 +129,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     os.path.join(BASE_DIR, 'static'),
 # ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT= '/home/brightsc/repositories/brightscope/public/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT= '/home/brightsc/repositories/brightscope/public/'
