@@ -1,60 +1,354 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brightscope</title>
+  <link rel="icon" href="static/logo/logo brightscope.png" type="image/png">
+  <title>Home | Bright Scope Islamic School</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <style>
-  .toggle-button{
-    margin-right: auto;
+  .the-event{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    height: 659px;
+    width: 1112px;
   }
-  .nav-item-medium.active {
-    color: blue;
+  .judul-event{
+    color: #000;
+
+    /* Heading/XXL */
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 90% */
   }
+  .upcoming-event{
+    color: #000;
+
+    /* Heading/M */
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+  }
+  .body-event{
+    height: 563px;
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+  }
+  .image-event{
+    display: flex;
+    padding: 28px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 465px;
+    height: 507px;
+    background: var(--core-blue-accent, #004AAD);
+    box-shadow: 0px 4px 25px 0px rgba(114, 112, 112, 0.25);
+  }
+  .event-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 430px;
+    height: 80px;
+  }
+  .tanggal-event{
+    color: var(--core-white, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 200% */
+  }
+  .nama-event{
+    color: var(--core-yellow, #F9B900);
+
+    /* Heading/M */
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+  }
+
+  /* Existing styles... */
+
+  .image-slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 1112px;
+  }
+  
+  .image-slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slider-buttons {
+    display: flex;
+    justify-content: space-between;
+    bottom: 10px;
+    margin: 10px 10px 10px 10px;
+    width: 100%;
+  }
+  
+  .prev-button,
+  .next-button {
+    background: var(--core-blue-accent, #004AAD);
+    color: var(--core-white, #FFF);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .prev-button {
+    left: 20px; /* Adjust the distance from the left */
+  }
+  
+  .next-button {
+    right: 20px; /* Adjust the distance from the right */
+  }
+  
+  /* Additional styles... */
+  
+  
+
+  @keyframes slide {
+    0%, 15%{
+      background-image: url("static/carousel/image1.jpg");
+      background-position: 50% 50%;
+    }
+    20%, 35% {
+      background-image: url("static/carousel/image2.jpg");
+      background-position: 50% 20%;
+    }
+    40%, 55%{
+      background-image: url("static/carousel/image3.jpg");
+      background-position: 50% 50%;
+    }
+    60%, 75% {
+      background-image: url("static/carousel/image4.jpg");
+      background-position: 50% 50%;
+    }
+    80%, 100% {
+      background-image: url("static/carousel/image5.jpg");
+      background-position: 50% 20%;
+    }
+  }
+  .daftar-sekarang{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+    width: 100%;
+    height: 684px;
+    margin-bottom: 200px;
+  }
+  .daftar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+    width: 1110px;
+    height: 684px;
+  }
+  .judul-daftar{
+    width: 771px;
+    color: #000;
+    text-align: center;
+
+    /* Heading/XXL */
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 90% */
+  }
+  .body-daftar{
+    height: 476px;
+    width: 100%; 
+    display: flex;
+    padding: 32px 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    background: rgba(97, 205, 244, 0.40);
+  }
+  .atas-daftar{
+    width: 1080px;
+    height: 180px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .bawah-daftar{
+    width: 1094px;
+    height: 108px;
+    display: flex;
+    align-items: flex-start;
+    gap: 247px;
+  }
+  .button-daftar{
+    width: 481px;
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .hubungi-daftar{
+    width: 344px;
+    height: 108px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .permohonan-daftar{
+    width: 344px;
+    height: 180px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .konfirmasi-daftar{
+    width: 344px;
+    height: 108px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pembayaran-daftar{
+    width: 503px;
+    height: 108px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .admin-daftar{
+    width: 344px;
+    height: 108px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .text-pendaftaran{
+    width: 276px;
+    color: #000;
+
+    /* Paragraph/M */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 225% */
+  }
+  .whatsapp-button{
+    cursor: pointer;
+    width: 234px;
+    height: 33px;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    {% comment %} border: 2px solid var(--core-blue-accent, #004AAD); {% endcomment %}
+    box-shadow: 0px 2px 6px 0px #4776BB;
+  }
+  .daftar-button{
+    cursor: pointer;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 32px;
+    background: var(--core-blue-accent, #004AAD);
+    box-shadow: 0px 2px 6px 0px #4776BB;
+  }
+  /* Add your styles for the feedback overlay here */
+.feedback-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add your styles for the feedback message here */
+.feedback-message {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.close-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #004AAD;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 </style>
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
-      <div class="toggle-button">
-        <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
-        <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
-      </div>
-      <div class="nav-item-medium active" onclick="navigateTo('/')">Beranda</div>
-      <div class="nav-item-medium" onclick="scrollToSection('#tentang-sekolah')">Tentang Kami</div>
-      <div class="nav-item-medium" onclick="navigateTo('/program')">Program</div>
-      <div class="nav-item-medium" onclick="navigateTo('/fasilitas')">Fasilitas</div>
-      <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Kontak</div>
+        <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
+        <div class="toggle-button">
+            <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
+            <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
+        </div>
+        <div class="nav-item-medium active" onclick="navigateTo('/')">Home</div>
+        <div class="nav-item-medium" onclick="scrollToSection('#tentang-sekolah')">About School</div>
+        <div class="nav-item-medium" onclick="navigateTo('/program')">Program</div>
+        <div class="nav-item-medium" onclick="navigateTo('/fasilitas')">Facility</div>
+        <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Contact</div>
     </div>
+  </div>
+  <div class="content-header">
     <div class="content-container">
+      <img src="static/polygon/Polygon 2.png" alt="Image" class="bottom-image">
+      <img src="static/polygon/Polygon 1.png" alt="Image" class="top-image">
+      <img src="static/polygon/Group 1.png" alt="Image" class="logo-image">
       <div class="left-content">
-        <div class="title"><h4>Bright Scope Islamic School</h4></div>
-        <div class="subtitle">
-          <h4>
-            <span class="line1">Playgroup. Kindergarten. Course</span>
-            <br>
-            <span class="line2">Fun learn and be a great kids</span>
-          </h4>
-          <a class="button" onclick="scrollToSection('#tentang-sekolah')"><span class="slide">Lihat profil kami</span></a>
-
+        <div class="left-text">
+          <span class="title">Welcome to playgroup, kindergarten, and course Bright Scope Islamic School</span>
+          <span class="left-body">
+            <span class="tagline">Fun, learn, and be great kids!</span>
+            <br>BRIGHT SCOPE ISLAMIC SCHOOL Playgroup and kindergarten under The Mentari Edukasi Gemilang foundation is a school with islamic bilingual curriculum to grow the children  Which Has A Vision And Mission Compilation Of  Islamic School-Based Education, Fun active and happy learning method
+          </span>
         </div>
+        <a class="daftar-header-button" onclick="scrollToSection('#daftar')"><span class="slide">Daftar Sekarang!</span></a>
         
-        <div class="image-container">
-          <img src="https://file.rendit.io/n/GNbySVugzpad2Z90X7eR.svg" alt="Top Image" class="bottom-image">
-          <img src="https://file.rendit.io/n/IhqFvEeoEmqC4FnjZfBw.svg" alt="Bottom Image" class="top-image">
-        </div>
       </div>
-      <div class="right-content">
-        <img src="https://file.rendit.io/n/XC5RDwCfNGWSXIRMx254.svg" alt="Right Image" class="right-image">
-      </div>
+      
     </div>
+    <div class="carousel"></div>
   </div>
   <div id="tentang-sekolah">
     <div class="body">
-      <h2 class="tentangsekolah">Tentang Sekolah</h2>
+      <h2 class="tentangsekolah">About School</h2>
       <img src="https://i.ibb.co/j8pYRF2/Yayasan-logo.png" alt="Image" class="centered-image">
       <p style = "font-weight: bold">
         Yayasan MEG membantu optimalisasi tumbuh kembang anak dalam mencapai berbagai tugas perkembangan seperti potensi 
@@ -110,61 +404,21 @@
     </div>
   </div>
   <div class="kurikulum">
+    <h2 class="judul-kurikulum">Curriculum</h2>
     <div class="isi-kurikulum">
-      <h3>Kurikulum</h3>
-      <div class="point-kurikulum">
-        <img src=https://i.ibb.co/n70BgH6/Frame-15.png>
-        <div class="tulisan-kurikulum">
-          <span class="judul-tulisan-kurikulum">Islamic Bilingual Curriculum</span>
-          <span class="isi-tulisan-kurikulum">
-            Kurikulum Bright Scope menggunakan Islamic bilingual 
-            curriculum yaitu pembelajaran melalui bahasa Indonesia 
-            dan bahasa Inggris dengan menanamkan nilai-nilai islam sejak dini.
-          </span>
-        </div>
+      <div class="gambar-kurikulum">
+        <img src="static/kurikulum/Ellipse 6.png" alt="Image">
+        <span class="text-kurikulum">Fun Active Learning</span>
       </div>
-
-      <div class="point-kurikulum">
-        <img src=https://i.ibb.co/r02cLdF/Frame-15-1.png>
-        <div class="tulisan-kurikulum">
-          <span class="judul-tulisan-kurikulum">Metode Pengajaran</span>
-          <span class="isi-tulisan-kurikulum">
-            Metode pembelajaran unggulan Brigth Scope yaitu Learning by doing, 
-            menstimulus para siswa sesuai dengan perkembangannya. 
-            Pembelajaran dilakukan secara Fun Active and Happy Learning.
-          </span>
-        </div>
+      <div class="gambar-kurikulum">
+        <img src="static/kurikulum/Ellipse 6 (1).png" alt="Image">
+        <span class="text-kurikulum">Learning By Doing Method</span>
       </div>
-      <div class="point-kurikulum">
-        <img src=https://i.ibb.co/whj2sXR/Frame-15-2.png>
-        <div class="tulisan-kurikulum">
-          <span class="judul-tulisan-kurikulum">Nilai-nilai Dasar Karakter Kurikulum</span>
-          <span class="isi-tulisan-kurikulum">
-            <span class="kiri">
-              &#x2022; Bertaqwa (Religious)
-              <br>&#x2022; Tanggung jawab (Responsible)
-              <br>&#x2022; Jujur (Honest)
-              <br>&#x2022; Disiplin (Discipline)
-              <br>&#x2022; Sopan (Polite)
-              <br>&#x2022; Peduli (Care)
-              <br>&#x2022; Sikap yang baik (Good Attitude)
-              <br>&#x2022; Toleransi (Tolarate)
-              <br>&#x2022; Kreatif (Creative)
-            </span>
-            <span class="kanan">
-              &#x2022; Mandiri (Independent)
-              <br>&#x2022; Menghargai (Respect)
-              <br>&#x2022; Bersahabat (Friendly)
-              <br>&#x2022; Cinta damai (Peace Full)
-              <br>&#x2022; Kerja Keras (Hard work)
-              <br>&#x2022; Semangat kebangsaan (Nationality Spirit)
-            </span> 
-          </span>
-        </div>
+      <div class="gambar-kurikulum" style="margin-right: 0px;">
+        <img src="static/kurikulum/islamic.png" alt="Image">
+        <span class="text-kurikulum">Islamic Bilingual</span>
       </div>
-      
     </div>
-    <img class="kurikulum-image" src="https://i.ibb.co/Wg2HqkB/Kurikulum.png" alt="Image">
   </div>
 
   <div class="learning-obj">
@@ -234,10 +488,69 @@
     </div>
   </div>
   
+  <div class="event">
+    <div class="event-container">
+      <h2 class="judul-event">Upcoming and Latest Events</h2>
+      <div class="the-event">
+        <span class="upcoming-event">Upcoming Event</span>
+        <div class="body-event">
+          <div class="image-event">
+            <img src="static/event/Tutti Fruity.png" alt="Image">
+            <div class="event-text">
+              <span class="tanggal-event">Saturday, August 12th 2023</span>
+              <span class="nama-event">TUTTI FRUITY PARTY</span>
+            </div>
+          </div>
+          <div class="image-event">
+            <img src="static/event/image 2.png" alt="Image">
+            <div class="event-text">
+              <span class="tanggal-event"></span>
+              <span class="nama-event">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="the-event">
+        <span class="upcoming-event">Latest Event</span>
+        <div class="image-slider-container">
+          <div class="image-slider">
+            <div class="body-event">
+              <div class="image-event">
+                <img src="static/event/trial.png" alt="Image">
+                <div class="event-text">
+                  <span class="tanggal-event">Every Monday - Saturday</span>
+                  <span class="nama-event">Trial Class</span>
+                </div>
+              </div>
+              <div class="image-event">
+                <img src="static/event/GO.png" alt="Image">
+                <div class="event-text">
+                  <span class="tanggal-event">Saturday, July 15th 2023</span>
+                  <span class="nama-event">Grand Opening with Pizza Hut</span>
+                </div>
+              </div>
+              <div class="image-event">
+                <img src="static/event/fundate.png" alt="Image">
+                <div class="event-text">
+                  <span class="tanggal-event">Saturday, June 17th 2023</span>
+                  <span class="nama-event">Fun Saturday Playdate</span>
+                </div>
+              </div>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <button class="prev-button" onclick="changeSlide(-1)">Previous</button>
+      <button class="next-button" onclick="changeSlide(1)">Next</button>
+    </div>
+  </div>
+
   <div class="program">
     <div class="program-container">
       <img class="image-program" src="https://i.ibb.co/yyy91cg/Frame-42.png" alt="Image">
-      <a class="program-button" href="/program"><span class="slide">Lihat program kami</sapn></a>
+      <a class="program-button" href="/program"><span class="slide">Lihat program kami</span></a>
     </div>
   </div>
 
@@ -261,6 +574,48 @@
       <img src="https://i.ibb.co/VvV3TJ8/IMG-0143-1.png" alt="Image">
     </div>
   </div>
+   
+  <div class="daftar-sekarang" id="daftar">
+    <div class="daftar">
+      <span class="judul-daftar">Proses Pendaftaran Brightscope Islamic School</span>
+      <div class="body-daftar">
+        <div class="atas-daftar">
+          <div class="hubungi-daftar">
+            <img src="static/daftar/phone.png" alt="Image">
+            <span class="text-pendaftaran">Hubungi bagian administrasi Brightscope Islamic School di nomor +6281292058377 </span>
+          </div>
+          <div class="permohonan-daftar">
+            <img src="static/daftar/permohonan.png" alt="Image">
+            <span class="text-pendaftaran">Setelah permohonan pendaftaran diterima, pihak admin akan memberikan E-Form pendaftaran yang harus diisi oleh pemohon</span>
+          </div>
+          <div class="konfirmasi-daftar">
+            <img src="static/daftar/card.png" alt="Image">
+            <span class="text-pendaftaran">Melakukan konfirmasi pengisian form dengan membayar biaya sesuai kelas yang dipilih</span>
+          </div>
+        </div>
+        <div class="bawah-daftar">
+          <div class="pembayaran-daftar">
+            <img src="static/daftar/ceklist.png" alt="Image">
+            <span class="text-pendaftaran" style="width: 435px;">Melakukan konfirmasi pembayaran dengan mengirim bukti transfer melalui Whatsapp atau <br>Email: brightscope.islamicschool@gmail.com</span>
+          </div>
+          <div class="admin-daftar">
+            <img src="static/daftar/called.png" alt="Image">
+            <span class="text-pendaftaran">Admin mengkonfirmasi kembali kepada pemohon setelah berkas diterima.</span>
+          </div>
+        </div>
+        <div class="button-daftar">
+          <a href="https://wa.me/081292058377" class="whatsapp-button">
+            <img src="static/daftar/Frame 127.png" alt="Button Image">
+          </a>
+          <span href="/" class="daftar-button" onclick="showFeedback()">
+            <span class="slide">Daftar Sekarang</span>
+          </span>
+          {% comment %} <div id="feedback-message" class="feedback-message"></div> {% endcomment %}
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <div id="bawah">
     <div class="header-footer"></div>
@@ -272,6 +627,7 @@
         <div class="isi-hubungi">
           <span class="telp">Telp: +6281292058377</span>
           <span class="email">Email: brightscope.islamicschool@gmail.com</span>
+          <span class="email">admin@brightscope.sch.id</span>
           <span class="instagram">Instagram: @bright.scope</span>
         </div>
       </div>
@@ -282,6 +638,17 @@
           <span class="isi-judul-alamat">Ruko The Boulevard No,1, Jakarta Garden City, Jakarta Timur, 13910</span>
         </div>
       </div>
+    </div>
+  </div>
+  <a href="https://wa.me/081292058377" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+  <!-- Feedback modal overlay -->
+  <div id="feedback-overlay" class="feedback-overlay">
+    <div id="feedback-message" class="feedback-message">
+      <p>Sorry, this feature is under development.</p>
+      <p>Please register via WhatsApp.</p>
+      <button class="close-button" onclick="hideFeedback()">Close</button>
     </div>
   </div>
 </body>
@@ -302,17 +669,80 @@
   function toggleLanguage(language) {
     var englishButton = document.getElementById("englishButton");
     var indonesianButton = document.getElementById("indonesianButton");
-  
+
+    var confirmed = false;
     if (language === "english") {
-      englishButton.classList.add("active");
-      indonesianButton.classList.remove("active");
-      // Code to switch to English language
+      confirmed = window.confirm("Sorry, this feature is still under development.");
     } else if (language === "indonesian") {
-      indonesianButton.classList.add("active");
-      englishButton.classList.remove("active");
-      // Code to switch to Indonesian language
+      confirmed = window.confirm("Mohon maaf, fitur ini masih dalam tahap pengembangan.");
+    }
+
+    if (confirmed) {
+      if (language === "english") {
+        englishButton.classList.add("active");
+        indonesianButton.classList.remove("active");
+        // Code to switch to English language
+      } else if (language === "indonesian") {
+        indonesianButton.classList.add("active");
+        englishButton.classList.remove("active");
+        // Code to switch to Indonesian language
+      }
     }
   }
+  const imageSlider = document.querySelector('.image-slider');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+
+  let currentIndex = 0;
+  const slideWidth = 304; // Width of each "image-event" container including padding and margin
+  const slidesPerPage = 2;
+  const totalSlides = document.querySelectorAll('.image-event').length;
+  console.log(totalSlides);
+
+  function changeSlide(direction) {
+    
+    currentIndex = currentIndex + -direction * slidesPerPage;
+    
+    console.log(currentIndex);
+    if (currentIndex < 0) {
+      currentIndex = totalSlides - 1;
+      console.log("sini");
+    } else if (currentIndex >= totalSlides) {
+      currentIndex = 0;
+      console.log("sana");
+    }
+    
+    const pindah = currentIndex * slideWidth;
+    imageSlider.style.transform = `translateX(${-pindah}px)`;
+  }
+    
+  
+  prevButton.addEventListener('click', () => changeSlide(-1));
+  nextButton.addEventListener('click', () => changeSlide(1));
+
+  function showFeedback() {
+    // Get the feedback overlay and message elements
+    var feedbackOverlay = document.getElementById("feedback-overlay");
+    var feedbackMessage = document.getElementById("feedback-message");
+  
+    // Show the feedback overlay
+    feedbackOverlay.style.display = "flex";
+  
+    // Show the feedback message
+    feedbackMessage.style.display = "block";
+  }
+  
+  function hideFeedback() {
+    // Get the feedback overlay and message elements
+    var feedbackOverlay = document.getElementById("feedback-overlay");
+    var feedbackMessage = document.getElementById("feedback-message");
+  
+    // Hide the feedback overlay and message
+    feedbackOverlay.style.display = "none";
+    feedbackMessage.style.display = "none";
+  }
+  
   
 </script>
+
 </html>
