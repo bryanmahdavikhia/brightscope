@@ -2,13 +2,32 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: medium;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+.float{
+  position:fixed;
+  width:30px;
+  height:60px;
+  bottom:20px;
+  right:20px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+  margin-top:16px;
 }
 .container {
   overflow: hidden;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding-bottom: 48px;
   gap: 5px;
   width: 100%;
   letter-spacing: -0.02rem;
@@ -28,11 +47,12 @@ body {
   margin-right: 32px;
 }
 
+
 .toggle-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-right: 400px; */
+  margin-right: auto;
 }
 
 .toggle-button button {
@@ -58,93 +78,117 @@ body {
   flex-shrink: 0;
   cursor: pointer;
 }
+.nav-item-medium.active {
+  color: blue;
+}
 
 .content-container {
-  overflow: hidden;
-  background-image: linear-gradient(90deg, rgba(97, 205, 244, 0.5) 1%, rgba(61, 157, 218, 0.5) 54%, rgba(0, 74, 173, 0.5) 100%);
+  position: absolute;
+  margin-bottom: 110px;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  z-index: 2;
+  background: var(--core-gradient, linear-gradient(89deg, rgba(97, 205, 244, 0.50) 53.62%, rgba(61, 157, 218, 0.50) 82.45%, rgba(0, 74, 173, 0.50) 100%));
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--core-gradient, linear-gradient(89deg, rgba(97, 205, 244, 0.50) 53.62%, rgba(61, 157, 218, 0.50) 82.45%, rgba(0, 74, 173, 0.50) 100%));
+  animation: slide 30s infinite;
   background-size: cover;
-  background-position: 50% 50%;
-  background-blend-mode: normal;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-right: 20px;
-  align-items: start;
+  background-position: center;
+  opacity: 0.5;
 }
-.left-content {
-  align-self: end;
-  display: flex;
-  flex-direction: column;
-  margin-top: 32px;
-  gap: 4px;
-  height: 391px;
-  align-items: start;
-}
-.title {
-  white-space: nowrap;
-  font-size: 36px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  line-height: 36px;
-  align-self: stretch;
-  margin-left: 75px;
-  margin-top: 20px; /* Adjust this value to move the element further down */
-  margin-bottom: 0px;
-}
-.subtitle {
-  white-space: nowrap;
-  font-family: 'Poppins', sans-serif;
-  font-weight: medium;
-  /* font-size: 50px; */
-  line-height: 36px;
-  width: 50%;
-  margin-left: 75px;
-  margin-top: -50px; 
-  margin-bottom: 24px;
-}
-.image-container {
+
+.content-header {
+  height: 603px;
+  flex-shrink: 0;
   position: relative;
-  display: flex;
+  overflow: hidden;
+}
+
+.left-content{
+  margin: 73px 558px 112px 93px;
+  height: 348px;
+  width: 629px;
+  display: inline-flex;
   flex-direction: column;
-  justify-content: end;
-  padding-top: 10px;
-  width: 48px;
   align-items: flex-start;
-  margin-left: 20px;
+  gap: 40px;
+  /* background: green; */
 }
-.top-image {
-  min-height: 0;
-  min-width: 0;
+.bottom-image{
   position: absolute;
-  bottom: -100px; /* Adjust this value to move the images further down */
-  right: -125px; /* Adjust this value to move the images further to the right */
+  margin: 406px 1044px 0px -50px;
+  z-index: -1;
 }
-.bottom-image {
-  min-height: 0;
-  min-width: 0;
+.top-image{
   position: absolute;
-  bottom: -100px; /* Adjust this value to move the images further down */
-  right: -115px; /* Adjust this value to move the images further to the right */
+  margin: 456px 1044px 0px -50px;
+  z-index: -1;
 }
-.right-content {
-  box-shadow: 0px 3px 195px 0px rgba(0, 74, 173, 0.7);
-  background-color: #fff;
+.logo-image{
+  position: absolute;
+  margin: 0px 0px 0px 700px;
+  z-index: -1;
+}
+.left-text{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  height: 328px;
+  align-items: flex-start;
+  gap: 32px;
+}
+.title{
+  width: 629px;
+  color: #000;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px; /* 90% */
+}
+.tagline{
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 225% */
+}
+.left-body{
+  width: 629px;
+
+  color: var(--core-black, #000);
+
+  /* Paragraph/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+.daftar-header-button{
+  padding: 12px 20px;
+  justify-content: center;
   align-items: center;
-  padding: 8px;
-  border-radius: 50%;
+  gap: 10px;
+  border-radius: 32px;
+  background: var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+  text-decoration: none;
+  color: white;
 }
-.right-image {
-  min-height: 0;
-  min-width: 0;
-  margin-left: 5px;
-  margin-top: 20px; /* Adjust this value to move the element further down */
-  /* inner-height: 100%; */
-}
+
+
 .body {
+  /* position: absolute; */
   display: block;
   text-align: center;
   justify-content: center;
@@ -152,6 +196,7 @@ body {
   height: 100px; /* Adjust the height as needed */
   margin-left: 250px;
   margin-right: 250px;
+  margin-top: 90px;
 }
 
 .tentangsekolah {
@@ -168,16 +213,6 @@ body {
 }
 .oren{
   color: #FF914C;
-}
-a {
-  padding: 12px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 32px;
-  background: var(--core-blue-accent, #004AAD);
-  box-shadow: 0px 2px 6px 0px #4776BB;
-  text-decoration: none;
 }
 
 .slide {
@@ -239,22 +274,16 @@ a {
   line-height: 36px; /* 200% */
 }
 .kurikulum {
-  height: 1000px;
-  flex-shrink: 0;
-  background: rgba(97, 205, 244, 0.40);
+  height: 612px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  position: relative;
+  padding: 40px 82px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  background: rgba(97, 205, 244, 0.40);
   margin-bottom: 200px;
 }
-.isi-kurikulum{
-  margin-top: 48px;
-  margin-left: 82px;
-  margin-right: 82px;
-  margin-bottom: 48px;
-}
-h3{
+.judul-kurikulum{
   color: #000;
 
   /* Heading/XXL */
@@ -263,62 +292,29 @@ h3{
   font-style: normal;
   font-weight: 700;
   line-height: 36px; /* 90% */
-  margin-bottom: 60px;
 }
-.the-kurikulum{
+.isi-kurikulum{
+  width: 1108px;
+  height: 416px;
   display: flex;
   align-items: flex-start;
-  gap: 45px;
+  gap: 32px;
 }
-
-p{
-  color: #000;
-  text-align: center;
-  /* Paragraph/L */
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 36px; /* 200% */
-}
-
-.point-kurikulum {
-  display: flex;
-  align-items: flex-start;
-  gap: 45px;
-  margin-bottom: 52px;
-}
-
-.tulisan-kurikulum {
+.gambar-kurikulum{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  gap: 40px;
 }
-.judul-tulisan-kurikulum{
+.text-kurikulum{
   color: #000;
+
   /* Heading/M */
   font-family: Poppins;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px; /* 128.571% */
-}
-.isi-tulisan-kurikulum{
-  color: #000;
-
-  /* Paragraph/L */
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 36px; /* 200% */
-  display: flex;
-}
-.kurikulum-image{
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 .kiri{
   width: 395px;
@@ -461,6 +457,38 @@ p{
   line-height: 36px; /* 200% */
   margin-left: 10px;
 }
+
+.event{
+  height: 1700px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+.event-container{
+  width: 1112px;
+  height: 100%;
+  gap: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.the-event{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  height: 659px;
+  width: 1112px;
+}
+.event-body{
+  width: 1112px;
+  height: 563px;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
 .program{
   height: 449px;
   flex-shrink: 0;
@@ -481,6 +509,8 @@ p{
 }
 
 .program-button {
+  text-decoration: none;
+  color: white;
   position: absolute; /* Set the button as an absolutely positioned element */
   top: 250px; /* Position the button at the top of the container */
   display: flex;
@@ -555,6 +585,8 @@ p{
   line-height: 36px; /* 225% */
 }
 .fasilitas-button{
+  text-decoration: none;
+  color: white;
   display: flex;
   padding: 12px 20px;
   justify-content: center;
