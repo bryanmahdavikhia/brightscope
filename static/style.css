@@ -7,7 +7,7 @@ body {
 }
 .float{
   position:fixed;
-  width:30px;
+  width:60px;
   height:60px;
   bottom:20px;
   right:20px;
@@ -489,6 +489,109 @@ body {
   align-items: flex-start;
   gap: 100px;
 }
+.judul-event{
+  color: #000;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 90% */
+}
+.upcoming-event{
+  color: #000;
+
+  /* Heading/M */
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+.body-event{
+  height: 563px;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+.image-event{
+  display: flex;
+  padding: 28px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 465px;
+  height: 507px;
+  background: var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 4px 25px 0px rgba(114, 112, 112, 0.25);
+}
+.event-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 430px;
+  height: 80px;
+}
+.tanggal-event{
+  color: var(--core-white, #FFF);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 200% */
+}
+.nama-event{
+  color: var(--core-yellow, #F9B900);
+
+  /* Heading/M */
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+
+/* Existing styles... */
+
+.image-slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 1112px;
+}
+
+.image-slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-buttons {
+  display: flex;
+  justify-content: space-between;
+  bottom: 10px;
+  margin: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+.prev-button,
+.next-button {
+  background: var(--core-blue-accent, #004AAD);
+  color: var(--core-white, #FFF);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 20px; /* Adjust the distance from the left */
+}
+
+.next-button {
+  right: 20px; /* Adjust the distance from the right */
+}
+
+
 .program{
   height: 449px;
   flex-shrink: 0;
@@ -602,9 +705,171 @@ body {
 .program-button:hover{
   background: var(--core-blue-accent-hover, #0055A0);
 }
-a:hover{
-  background: var(--core-blue-accent-hover, #0055A0);
+
+.daftar-sekarang{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+  width: 100%;
+  height: 684px;
+  margin-bottom: 200px;
 }
+.daftar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  width: 1110px;
+  height: 684px;
+}
+.judul-daftar{
+  width: 771px;
+  color: #000;
+  text-align: center;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 90% */
+}
+.body-daftar{
+  height: 476px;
+  width: 100%; 
+  display: flex;
+  padding: 32px 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  background: rgba(97, 205, 244, 0.40);
+}
+.atas-daftar{
+  width: 1080px;
+  height: 180px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.bawah-daftar{
+  width: 1094px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 247px;
+}
+.button-daftar{
+  width: 481px;
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.hubungi-daftar{
+  width: 344px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.permohonan-daftar{
+  width: 344px;
+  height: 180px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.konfirmasi-daftar{
+  width: 344px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.pembayaran-daftar{
+  width: 503px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.admin-daftar{
+  width: 344px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.text-pendaftaran{
+  width: 276px;
+  color: #000;
+
+  /* Paragraph/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 225% */
+}
+.whatsapp-button{
+  cursor: pointer;
+  width: 234px;
+  height: 33px;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  border: 2px solid var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+}
+.daftar-button{
+  cursor: pointer;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  background: var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+}
+/* Add your styles for the feedback overlay here */
+.feedback-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add your styles for the feedback message here */
+.feedback-message {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.close-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #004AAD;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .header-footer{
   height: 35px;
   background: var(--core-blue-accent, #004AAD);
