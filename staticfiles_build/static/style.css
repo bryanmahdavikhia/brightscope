@@ -1,0 +1,821 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: medium;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:20px;
+  right:20px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+  margin-top:16px;
+}
+.container {
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  letter-spacing: -0.02rem;
+}
+.header {
+  box-shadow: 0px 8px 40px 0px rgba(112, 144, 176, 0.2);
+  background-color: #fff;
+  display: flex;
+  flex-direction: flex-start;
+  gap: 20px;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo {
+  min-height: 0;
+  min-width: 0;
+  margin-right: 32px;
+}
+
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+}
+
+.toggle-button button {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  /* margin-right: 400px; */
+}
+
+.toggle-button button.active {
+  background-color: #004aad;
+  color: #fff;
+  border-radius: 32px;
+}
+
+.nav-item-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: medium;
+  line-height: 36px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.nav-item-medium.active {
+  color: blue;
+}
+
+.content-container {
+  position: absolute;
+  margin-bottom: 110px;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  z-index: 2;
+  background: var(--core-gradient, linear-gradient(89deg, rgba(97, 205, 244, 0.50) 53.62%, rgba(61, 157, 218, 0.50) 82.45%, rgba(0, 74, 173, 0.50) 100%));
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--core-gradient, linear-gradient(89deg, rgba(97, 205, 244, 0.50) 53.62%, rgba(61, 157, 218, 0.50) 82.45%, rgba(0, 74, 173, 0.50) 100%));
+  animation: slide 30s infinite;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.content-header {
+  height: 603px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-content{
+  margin: 73px 558px 112px 93px;
+  height: 348px;
+  width: 629px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  /* background: green; */
+}
+.bottom-image{
+  position: absolute;
+  margin: 406px 1044px 0px -50px;
+  z-index: -1;
+}
+.top-image{
+  position: absolute;
+  margin: 456px 1044px 0px -50px;
+  z-index: -1;
+}
+.logo-image{
+  position: absolute;
+  margin: 0px 0px 0px 700px;
+  z-index: -1;
+}
+.left-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.title{
+  width: 629px;
+  color: #000;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px; /* 90% */
+}
+.tagline{
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 225% */
+}
+.left-body{
+  width: 629px;
+
+  color: var(--core-black, #000);
+
+  /* Paragraph/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+}
+.daftar-header-button{
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  background: var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+  text-decoration: none;
+  color: white;
+}
+
+
+.body {
+  /* position: absolute; */
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100px; /* Adjust the height as needed */
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 90px;
+}
+
+.tentangsekolah {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px; /* Adjust the font size as needed */
+  /* Add other styles as needed */
+}
+.centered-image {
+  margin-top: 20px; /* Adjust the margin to move the image further down */
+  width: 347px; /* Adjust the width to make the image smaller */
+  height: auto; /* Maintain aspect ratio */
+  /* Add other styles as needed */
+}
+.oren{
+  color: #FF914C;
+}
+
+.slide {
+  cursor: pointer;
+  color: var(--core-white, #FFF);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 225% */
+}
+
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 650px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+.child-container{
+  display: flex;
+  height: 509px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 22px;
+  border: 1px solid var(--core-blue-accent, #004AAD);
+}
+.header-container {
+  border-radius: 20px 20px 0px 0px;
+  background: var(--core-blue-accent, #004AAD);
+  display: flex;
+  width: 346px;
+  height: 140px;
+  padding: 20px 0px 25px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: var(--core-white, #FFF);font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+.body-container {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 200% */
+}
+.kurikulum {
+  height: 612px;
+  display: flex;
+  padding: 40px 82px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  background: rgba(97, 205, 244, 0.40);
+  margin-bottom: 200px;
+}
+.judul-kurikulum{
+  color: #000;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 90% */
+}
+.isi-kurikulum{
+  width: 1108px;
+  height: 416px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.gambar-kurikulum{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.text-kurikulum{
+  color: #000;
+
+  /* Heading/M */
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+.kiri{
+  width: 395px;
+  color: #000;
+  /* Paragraph/L */
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 200% */
+  flex: 1;
+}
+.kanan{
+  width: 395px;
+  color: #000;
+
+  /* Paragraph/L */
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 200% */
+  flex: 1;
+}
+.learning-obj {
+  height: 1110px;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+  z-index:-1;
+}
+
+.container-learning {
+  display: flex;
+  width: 1112px;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.judul-learning{
+  color: #000;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 90% */
+}
+
+.image-learning {
+  width: 990px;
+  height: 1013px;
+}
+.karakter{
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 200px;
+  height: 677px;
+}
+.karakter-container{
+  display: flex;
+  width: 1120px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  /* background: rgba(0, 205, 244, 0.40); */
+}
+.judul-karakter{
+  color: #000;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 90% */
+}
+.isi-karakter{
+  display: flex;
+  align-items: flex-start;
+  gap: 42px;
+}
+.kolom-karakter{
+  display: flex;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  border-radius: 20px;
+  border: 1px solid var(--core-blue-accent, #004AAD);
+  height: 278px;
+  width: 535px;
+}
+.header-kolom{
+  display: flex;
+  width: 535px;
+  padding: 20px 0px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 15px 15px 0px 0px;
+  background: var(--core-blue-accent, #004AAD);
+  height: 36px;
+}
+.judul-kolom{
+  color: var(--core-yellow, #F9B900);
+
+  /* Heading/M */
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 128.571% */
+}
+.body-kolom{
+  color: #000;
+  width: 535px;
+
+  /* Paragraph/L */
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 200% */
+  margin-left: 10px;
+}
+
+.program{
+  height: 449px;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 200px;
+  /* background: rgba(0, 205, 244, 0.40); */
+}
+.program-container {
+  position: relative; /* Set the container as a relative positioned element */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  /* background: rgba(0, 20, 244, 0.40); */
+}
+
+.program-button {
+  text-decoration: none;
+  color: white;
+  position: absolute; /* Set the button as an absolutely positioned element */
+  top: 250px; /* Position the button at the top of the container */
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  background: var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+}
+
+.fasilitas{
+  display: flex;
+  height: 601px;
+  padding: 40px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  background: #C0EBFB;
+  margin-bottom: 200px;
+}
+.header-foto{
+  display: flex;
+  align-items: flex-start;
+  gap: 38px;
+  height: 175px;
+  width: 1113px;
+
+}
+.body-fasilitas{
+  display: flex;
+  align-items: flex-start;
+  gap: 33px;
+  height: 362px;
+  width: 1115px;
+}
+.isi-fasilitas{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 126px;
+  width: 634px;
+  height: 362px;
+}
+.tulisan-fasilitas{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 634px;
+  height: 176px;
+}
+.judul-fasilitas{
+  color: #000;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 90% */
+}
+.isi-judul-fasilitas{
+  color: #000;
+
+  /* Paragraph/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 225% */
+}
+.fasilitas-button{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  background: var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+}
+.fasilitas-button:hover{
+  background: var(--core-blue-accent-hover, #0055A0);
+}
+.program-button:hover{
+  background: var(--core-blue-accent-hover, #0055A0);
+}
+
+.daftar-sekarang{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+  width: 100%;
+  height: 684px;
+  margin-bottom: 200px;
+}
+.daftar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  width: 1110px;
+  height: 684px;
+}
+.judul-daftar{
+  width: 771px;
+  color: #000;
+  text-align: center;
+
+  /* Heading/XXL */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 90% */
+}
+.body-daftar{
+  height: 476px;
+  width: 100%; 
+  display: flex;
+  padding: 32px 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  background: rgba(97, 205, 244, 0.40);
+}
+.atas-daftar{
+  width: 1080px;
+  height: 180px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.bawah-daftar{
+  width: 1094px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 247px;
+}
+.button-daftar{
+  width: 481px;
+  height: 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.hubungi-daftar{
+  width: 344px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.permohonan-daftar{
+  width: 344px;
+  height: 180px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.konfirmasi-daftar{
+  width: 344px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.pembayaran-daftar{
+  width: 503px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.admin-daftar{
+  width: 344px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.text-pendaftaran{
+  width: 276px;
+  color: #000;
+
+  /* Paragraph/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 225% */
+}
+.whatsapp-button{
+  cursor: pointer;
+  width: 234px;
+  height: 33px;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  border: 2px solid var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+}
+.daftar-button{
+  cursor: pointer;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  background: var(--core-blue-accent, #004AAD);
+  box-shadow: 0px 2px 6px 0px #4776BB;
+}
+/* Add your styles for the feedback overlay here */
+.feedback-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add your styles for the feedback message here */
+.feedback-message {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 400px;
+}
+
+.close-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #004AAD;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-footer{
+  height: 35px;
+  background: var(--core-blue-accent, #004AAD);
+}
+.footer{
+  display: flex;
+  height: 287px;
+  padding: 0px 84px;
+  align-items: center;
+  gap: 50px;
+  opacity: 0.8299999833106995;
+  background: var(--core-gradient, linear-gradient(89deg, rgba(97, 205, 244, 0.50) 0%, rgba(61, 157, 218, 0.50) 53.34%, rgba(0, 74, 173, 0.50) 100%));
+}
+.footer-image{
+  width: 224.424px;
+  height: 126.528px;
+}
+.line{
+  width: 2px;
+  height: 176.011px;
+  background: var(--core-black, #000);
+}
+.hubungi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 148px;
+  width: 369px;
+  /* background: rgba(30, 205, 244, 0.40);% */
+}
+.alamat{
+  display: flex;
+  width: 348px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 348px;
+  height: 112px;
+  /* background: rgba(30, 205, 244, 0.40); */
+}
+.judul-hubungi{
+  color: var(--core-black, #000);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 225% */
+}
+.isi-hubungi{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--core-black, #000);
+
+  /* Paragraph/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 225% */
+}
+.judul-alamat{
+  color: var(--core-black, #000);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 225% */
+}
+.isi-alamat{
+  width: 351px;
+  color: var(--core-black, #000);
+  text-align: center;
+
+  /* Paragraph/M */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 225% */
+}
