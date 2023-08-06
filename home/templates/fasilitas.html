@@ -103,6 +103,84 @@
     justify-content: center;
     margin-bottom: 200px;
   }
+  .container {
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    letter-spacing: -0.02rem;
+  }
+  
+  .header {
+    box-shadow: 0px 8px 40px 0px rgba(112, 144, 176, 0.2);
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Adjust alignment */
+    gap: 20px;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding */
+  }
+  
+  .logo {
+    min-height: 0;
+    min-width: 0;
+    margin-right: 20px; /* Adjust margin */
+  }
+  
+  .toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px;
+  }
+  
+  .toggle-button button {
+    padding: 8px 16px; /* Adjust padding */
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 32px;
+  }
+  
+  .nav-item-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: medium;
+    line-height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+    padding: 10px 16px; /* Adjust padding */
+  }
+  
+  .nav-item-medium.active {
+    color: blue;
+    border-radius: 32px; /* Add border-radius for active state */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container{
+      align-items: center;
+    }
+    .header {
+      width: 100%;
+      flex-direction: column; /* Stack items in a column on smaller screens */
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+  
+    .toggle-button {
+      margin: 10px 0px 0px 0px;
+      align-items: center;
+      justify-content: center; /* Center the buttons on smaller screens */
+    }
+  }
+  
 </style>
 <body>
     <div class="container">
