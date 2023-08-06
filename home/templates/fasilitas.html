@@ -3,84 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brightscope</title>
+  <link rel="icon" href="static/logo/logo brightscope.png" type="image/png">
+  <title>Facility | Bright Scope Islamic School</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="static\style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <style>
-    .container{
-        padding-bottom: 0px;
-    }
-    .toggle-button{
-      margin-right: auto;
-    }
-    .nav-item-medium.active {
-      color: #004aad;
-    }
-    .header-fasilitas{
-        display: flex;
-        height: 498px;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        margin-bottom: 200px;
-    }
-    .fasilitas-image{
-        margin-top: 100px;
-        width: 1500px;
-    }
-    .body-fasilitas{
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        position: relative;
-        width: 100%;
-    }
-  </style>
+  .container{
+    padding-bottom: 0px;
+  }
+  .toggle-button{
+    margin-right: auto;
+  }
+  .nav-item-medium.active {
+    color: #004aad;
+  }
+  .header-fasilitas{
+    display: flex;
+    width: 100%;
+    height: 498px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: 200px;
+  }
+  .fasilitas-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .body-fasilitas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    height: 1289px;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .float:hover{
+    background: var(--core-blue-accent-hover, #0055A0);
+  }
+  .judul-facility{
+    color: #000;
+
+    /* Heading/XXL */
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 90% */
+  }
+  .facility-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    height: 526px;
+  }
+  .judul-facility-content{
+    color: #000;
+
+    /* Heading/L */
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 112.5% */
+  }
+  .image-facility-container{
+    display: flex;
+    padding: 36px 0px;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    background: #C0EBFB;
+    height: 358px;
+    width: 100%;
+  }
+  .facility-carousel{
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    width: 1152px;
+    height: 358px;
+  }
+  .facility-image{
+    width: 558px;
+    height: 358.33px;
+  }
+  .video-fasilitas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+  }
+</style>
 <body>
     <div class="container">
-        <div class="header">
-            <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
-            <div class="toggle-button">
-              <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
-              <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
-            </div>
-            <div class="nav-item-medium" onclick="navigateTo('/')">Beranda</div>
-            <div class="nav-item-medium" onclick="navigateTo('/')">Tentang Kami</div>
-            <div class="nav-item-medium" onclick="navigateTo('/program')">Program</div>
-            <div class="nav-item-medium active" onclick="navigateTo('/fasilitas')">Fasilitas</div>
-            <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Kontak</div>
+      <div class="header">
+        <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
+        <div class="toggle-button">
+          <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
+          <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
         </div>
+        <div class="nav-item-medium" onclick="navigateTo('/')">Home</div>
+        <div class="nav-item-medium" onclick="navigateTo('/')">About School</div>
+        <div class="nav-item-medium" onclick="navigateTo('/program')">Program</div>
+        <div class="nav-item-medium active" onclick="navigateTo('/fasilitas')">Facility</div>
+        <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Contact</div>
+      </div>
     </div>
     <div class="header-fasilitas">
-        <img class="fasilitas-image" src="https://i.ibb.co/fNXdhfW/Group-3.png">
+        <img class="fasilitas-image" src="static/Facility/Facility Header.png">
     </div>
     <div class="body-fasilitas">
-        <img class="body-fasilitas-image" src="https://i.ibb.co/ZMpXM7g/image-1-1.png">
+      <span class="judul-fasilitas">Facility</span>
+      <div class="facility-content">
+        <span class="judul-facility-content">Playgroup Classroom</span>
+        <div class="image-facility-container">
+          <a class="left-facility"><img src="static/Facility/left.png" alt="left"></a>
+          <div class="facility-carousel">
+            <img class="facility-image" src="static/Facility/playgroup 1.png" alt="Playgroup Classroom">
+            <img class="facility-image" src="static/Facility/playgroup 2.png" alt="Playgroup Classroom">
+
+          </div>
+          <a class="left-facility"><img src="static/Facility/right.png" alt="left"></a>
+
+        </div>
+      </div>
+      <div class="facility-content">
+        <span class="judul-facility-content">Kindergarten Classroom</span>
+        <div class="image-facility-container">
+          <a class="left-facility"><img src="static/Facility/left.png" alt="left"></a>
+          <div class="facility-carousel">
+            <img class="facility-image" src="static/Facility/tk 1.png" alt="Playgroup Classroom">
+            <img class="facility-image" src="static/Facility/tk 2.png" alt="Playgroup Classroom">
+          </div>
+          <a class="left-facility"><img src="static/Facility/right.png" alt="left"></a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="video-fasilitas">
+      <video controls>
+        <source src="static/Facility/bright scope.mp4" type="video/mp4">
+        <!-- Provide alternative video formats for better browser compatibility -->
+        <!-- <source src="path/to/your/video.webm" type="video/webm"> -->
+        <!-- <source src="path/to/your/video.ogv" type="video/ogg"> -->
+    
+        Your browser does not support the video tag.
+      </video>
     </div>
     <div id="bawah">
-        <div class="header-footer"></div>
-        <div class="footer">
-          <img class="footer-image" src="https://i.ibb.co/wC1Mptc/Brightscope-logo-1.png" alt="Image">
-          <div class="line"></div>
-          <div class="hubungi">
-            <span class="judul-hubungi">Hubungi Kami</span>
-            <div class="isi-hubungi">
-              <span class="telp">Telp: +6281292058377</span>
-              <span class="email">Email: brightscope.islamicschool@gmail.com</span>
-              <span class="instagram">Instagram: @bright.scope</span>
-            </div>
+      <div class="header-footer"></div>
+      <div class="footer">
+        <img class="footer-image" src="https://i.ibb.co/wC1Mptc/Brightscope-logo-1.png" alt="Image">
+        <div class="line"></div>
+        <div class="hubungi">
+          <span class="judul-hubungi">Hubungi Kami</span>
+          <div class="isi-hubungi">
+            <span class="telp">Telp: +6281292058377</span>
+            <span class="email">Email: brightscope.islamicschool@gmail.com</span>
+            <span class="email">admin@brightscope.sch.id</span>
+            <span class="instagram">Instagram: @bright.scope</span>
           </div>
-          <div class="line"></div>
-          <div class="alamat">
-            <span class="judul-alamat">Alamat</span>
-            <div class="isi-alamat">
-              <span class="isi-judul-alamat">Ruko The Boulevard No,1, Jakarta Garden City, Jakarta Timur, 13910</span>
-            </div>
+        </div>
+        <div class="line"></div>
+        <div class="alamat">
+          <span class="judul-alamat">Alamat</span>
+          <div class="isi-alamat">
+            <span class="isi-judul-alamat">Ruko The Boulevard No,1, Jakarta Garden City, Jakarta Timur, 13910</span>
           </div>
         </div>
       </div>
+    </div>
+    <a href="https://wa.me/081292058377" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
 </body>
 
 <script>
@@ -99,16 +204,26 @@
     function toggleLanguage(language) {
       var englishButton = document.getElementById("englishButton");
       var indonesianButton = document.getElementById("indonesianButton");
-    
+  
+      var confirmed = false;
       if (language === "english") {
-        englishButton.classList.add("active");
-        indonesianButton.classList.remove("active");
-        // Code to switch to English language
+        confirmed = window.confirm("Sorry, this feature is still under development.");
       } else if (language === "indonesian") {
-        indonesianButton.classList.add("active");
-        englishButton.classList.remove("active");
-        // Code to switch to Indonesian language
+        confirmed = window.confirm("Mohon maaf, fitur ini masih dalam tahap pengembangan.");
+      }
+  
+      if (confirmed) {
+        if (language === "english") {
+          englishButton.classList.add("active");
+          indonesianButton.classList.remove("active");
+          // Code to switch to English language
+        } else if (language === "indonesian") {
+          indonesianButton.classList.add("active");
+          englishButton.classList.remove("active");
+          // Code to switch to Indonesian language
+        }
       }
     }
+  
     
   </script>
