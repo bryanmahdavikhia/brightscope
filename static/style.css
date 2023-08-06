@@ -571,6 +571,9 @@ body {
 .program-button:hover{
   background: var(--core-blue-accent-hover, #0055A0);
 }
+.float:hover{
+  background: var(--core-blue-accent-hover, #0055A0);
+}
 
 .daftar-sekarang{
   display: flex;
