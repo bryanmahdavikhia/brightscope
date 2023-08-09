@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <style>
+  .text-kurikulum{
+    color: #000;
+  
+    /* Heading/M */
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+    text-align: center;
+  }
   .events{
     display: flex;
     flex-direction: column;
@@ -132,15 +143,15 @@
   }
   @keyframes slide {
     0%, 15%{
-      background-image: url("static/carousel/image1.jpg");
+      background-image: url("static/carousel/header.jpg");
       background-position: 50% 50%;
     }
     20%, 35% {
-      background-image: url("static/carousel/image2.jpg");
+      background-image: url("static/carousel/header 1.jpg");
       background-position: 50% 20%;
     }
     40%, 55%{
-      background-image: url("static/carousel/image3.jpg");
+      background-image: url("static/carousel/header 2.jpg");
       background-position: 50% 50%;
     }
     60%, 75% {
@@ -437,7 +448,7 @@
       align-items: center;
     }
     .left-content{
-      margin: 0px 0px 0px 0px;
+      margin: 10px 0px 0px 0px;
       width: 100%;
       height: 100%;
       display: flex;
@@ -446,7 +457,7 @@
       gap: 32px;
     }
     .left-text{
-      margin: 0px 0px 0px 0px;
+      margin: 15px 0px 0px 0px;
       width: 100%;
       height: 600px;
       display: flex;
@@ -484,6 +495,52 @@
       margin: 686px 1044px 0px -50px;
       z-index: -1;
     }
+    .body {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .tentangsekolah {
+        font-size: 20px;
+    }
+
+    .centered-image {
+        margin-top: 10px;
+        max-width: 250px;
+    }
+    .parent-container {
+      flex-direction: column;
+      margin: 650px 20px 20px 20px;
+    }
+
+    .header-container{
+      width: 100%;
+    }
+
+    .body-container{
+      width: 100%;
+    }
+  
+    .child-container {
+      width: 100%;
+      border-radius: 22px;
+      margin-bottom: 20px;
+    }
+    .kurikulum{
+      display: flex;
+      height: 1500px;
+      padding: 40px 82px;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+    .isi-kurikulum{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
   }
   
   
@@ -584,16 +641,16 @@
     <h2 class="judul-kurikulum">Curriculum</h2>
     <div class="isi-kurikulum">
       <div class="gambar-kurikulum">
-        <img src="static/kurikulum/Ellipse 6.png" alt="Image">
-        <span class="text-kurikulum">Fun Active Learning</span>
+        <img src="static/kurikulum/fun.png" alt="Image">
+        <span class="text-kurikulum">Fun Active and Happy Learning</span>
       </div>
       <div class="gambar-kurikulum">
-        <img src="static/kurikulum/Ellipse 6 (1).png" alt="Image">
+        <img src="static/kurikulum/doing.png" alt="Image">
         <span class="text-kurikulum">Learning By Doing Method</span>
       </div>
       <div class="gambar-kurikulum" style="margin-right: 0px;">
-        <img src="static/kurikulum/islamic.png" alt="Image">
-        <span class="text-kurikulum">Islamic Bilingual</span>
+        <img src="static/kurikulum/islamic bil.png" alt="Image">
+        <span class="text-kurikulum">Islamic Bilingual Curriculum</span>
       </div>
     </div>
   </div>
@@ -607,7 +664,7 @@
   </div>
   <div class="karakter">
     <div class="karakter-container">
-      <span class="judul-karakter">Karakter</span>
+      <span class="judul-karakter">Characters</span>
       <div class="isi-karakter">
         <div class="kolom-karakter">
           <div class="header-kolom">
@@ -748,7 +805,9 @@
 
   <div class="fasilitas">
     <div class="header-foto">
-      <img src="https://i.ibb.co/MMpx2YG/Frame-41.png" alt="Image">
+      <img src="static/facility/home 2.png" alt="Image">
+      <img src="static/facility/home 3.png" alt="Image">
+      <img src="static/facility/home 4.png" alt="Image">
     </div>
     <div class="body-fasilitas">
       <div class="isi-fasilitas">
@@ -761,7 +820,7 @@
         </div>
         <a class="fasilitas-button" href="/fasilitas"><span class="slide">Explore Our Facilities</sapn></a>
       </div>
-      <img src="https://i.ibb.co/VvV3TJ8/IMG-0143-1.png" alt="Image">
+      <img src="static/facility/home.png" alt="Image">
     </div>
   </div>
    
@@ -817,7 +876,7 @@
           <span class="telp">Telp: +6281292058377</span>
           <span class="email">Email: brightscope.islamicschool@gmail.com</span>
           <span class="email">admin@brightscope.sch.id</span>
-          <span class="instagram">Instagram: @bright.scope</span>
+          <span class="instagram">Instagram: @bright.scopeschool</span>
         </div>
       </div>
       <div class="line"></div>
