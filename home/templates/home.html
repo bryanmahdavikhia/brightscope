@@ -80,7 +80,11 @@
     height: 486px;
     overflow-x: hidden;
   }
-  .slide {
+  .slide_bawah {
+    display: flex;
+    gap: 32px;
+  }
+  .slide_atas {
     display: flex;
     gap: 32px;
   }
@@ -728,27 +732,37 @@
       <div class="events-body">
         <span class="judul-events-body">Upcoming Events</span>
         <div class="isi-events">
-          <span class="left-button">
+          <span class="left-button" onclick="slideLefts()">
             <img src="static/event/left.png" alt="Image">
           </span>
-          <div class="events-carousel">
-            <div class="slide">
+          <div class="events-carousel" id="carousel_atas">
+            <div class="slide_atas">
               <div class="catalog-events">
-                <img class="image-events"src="static/event/Tutti Fruity.png" alt="Image">
+                <img class="image-events"src="static/event/tuti.png" alt="Image">
                 <div class="detail-events">
                   <span class="tanggal-detail-events">Saturday, August 12th 2023</span>
                   <span class="judul-detail-events">Tutti Fruity Party</span>
                 </div>
               </div>
               <div class="catalog-events">
-                <img class="image-events"src="static/event/image 2.png" alt="Image">
+                <img class="image-events"src="static/event/baby.png" alt="Image">
                 <div class="detail-events">
-                  <span class="judul-detail-events">Coming Soon</span>
+                  <span class="tanggal-detail-events">Now Open !</span>
+                  <span class="judul-detail-events">Baby School</span>
+                </div>
+              </div>
+            </div>
+            <div class="slide_atas">
+              <div class="catalog-events">
+                <img class="image-events"src="static/event/trial_class.png" alt="Image">
+                <div class="detail-events">
+                  <span class="tanggal-detail-events">Every Monday - Saturday</span>
+                  <span class="judul-detail-events">Trial Class</span>
                 </div>
               </div>
             </div>
           </div>
-          <span class="right-button">
+          <span class="right-button" onclick="slideRights()">
             <img src="static/event/right.png" alt="Image">
           </span>
         </div>
@@ -760,10 +774,10 @@
           <span class="left-button" onclick="slideLeft()">
             <img src="static/event/left.png" alt="Image">
           </span>
-          <div class="events-carousel" id="carousel">
-            <div class="slide">
+          <div class="events-carousel" id="carousel_bawah">
+            <div class="slide_bawah">
               <div class="catalog-events">
-                <img class="image-events"src="static/event/trial.png" alt="Image">
+                <img class="image-events"src="static/event/trial_class.png" alt="Image">
                 <div class="detail-events">
                   <span class="tanggal-detail-events">Every Monday - Saturday</span>
                   <span class="judul-detail-events">Trial Class</span>
@@ -777,7 +791,7 @@
                 </div>
               </div>
             </div>
-            <div class="slide">
+            <div class="slide_bawah">
               <div class="catalog-events">
                 <img class="image-events"src="static/event/fundate.png" alt="Image">
                 <div class="detail-events">
@@ -938,11 +952,11 @@
     }
   }
 
-  const carousel = document.getElementById('carousel');
+  const carousel = document.getElementById('carousel_bawah');
   let slideIndex = 0;
 
   function showSlide() {
-    const slides = carousel.getElementsByClassName('slide');
+    const slides = carousel.getElementsByClassName('slide_bawah');
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
@@ -950,19 +964,45 @@
   }
 
   function slideLeft() {
-    const slides = carousel.getElementsByClassName('slide');
+    const slides = carousel.getElementsByClassName('slide_bawah');
     slideIndex = (slideIndex - 1 + slides.length) % slides.length;
     showSlide();
   }
 
   function slideRight() {
-    const slides = carousel.getElementsByClassName('slide');
+    const slides = carousel.getElementsByClassName('slide_bawah');
     slideIndex = (slideIndex + 1) % slides.length;
     showSlide();
   }
 
   // Show the initial slide
   showSlide();
+
+  const carousels = document.getElementById('carousel_atas');
+  let slideIndexs = 0;
+
+  function showSlides() {
+    const slid = carousels.getElementsByClassName('slide_atas');
+    for (let i = 0; i < slid.length; i++) {
+      slid[i].style.display = 'none';
+    }
+    slid[slideIndexs].style.display = 'flex';
+  }
+
+  function slideLefts() {
+    const slid = carousels.getElementsByClassName('slide_atas');
+    slideIndexs = (slideIndexs - 1 + slid.length) % slid.length;
+    showSlides();
+  }
+
+  function slideRights() {
+    const slid = carousels.getElementsByClassName('slide_atas');
+    slideIndexs = (slideIndexs + 1) % slid.length;
+    showSlides();
+  }
+
+  // Show the initial slide
+  showSlides();
 
 
   function showFeedback() {
