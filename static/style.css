@@ -306,16 +306,6 @@ body {
   align-items: center;
   gap: 40px;
 }
-.text-kurikulum{
-  color: #000;
-
-  /* Heading/M */
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px; /* 128.571% */
-}
 .kiri{
   width: 395px;
   color: #000;
