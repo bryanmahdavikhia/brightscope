@@ -11,15 +11,32 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <style>
-  .the-event{
+  .body{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 60px;
-    height: 659px;
-    width: 1112px;
+    align-items: center;
+    gap: 110px;
+    height: 1200px;
+    margin-bottom: 200px;
+    margin-top: 200px;
   }
-  .judul-event{
+  .tentang-visi-misi{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1112px;
+    height: 100%;
+    gap: 110px;
+  }
+  .tentang-sekolah{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 1112px;
+    height: 581px;
+  }
+  .title-sekolah{
     color: #000;
 
     /* Heading/XXL */
@@ -29,7 +46,120 @@
     font-weight: 700;
     line-height: 36px; /* 90% */
   }
-  .upcoming-event{
+  .isi-tentangsekolah{
+    width: 1112px;
+    color: #000;
+    text-align: center;
+
+    /* Paragraph/L */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 200% */
+  }
+  .logo-yayasan{
+    width: 357.327px;
+    height: 357.327px;
+    flex-shrink: 0;
+  }
+  .visi-misi-tujuan{
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    width: 1110px;
+    height: 509px;
+  }
+  .container-vmt{
+    display: flex;
+    width: 346px;
+    height: 100%;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 26px;
+    border: 2px solid var(--core-blue-accent, #004AAD);
+  }
+  .header-vmt{
+    display: flex;
+    width: 346px;
+    height: 155px;
+    padding: 20px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 20px 20px 0px 0px;
+    background: var(--core-blue-accent, #004AAD);
+  }
+  .judul-vmt{
+    color: var(--core-white, #FFF);
+
+    /* Heading/M */
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+  }
+  .body-vmt{
+    width: 306px;
+    color: #000;
+    text-align: center;
+
+    /* Paragraph/L */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 200% */
+  }
+  .text-kurikulum{
+    color: #000;
+  
+    /* Heading/M */
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+    text-align: center;
+  }
+  .events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 1344px;
+    margin-bottom: 200px;
+  }
+  .events-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+    width: 1116px;
+    height: 1344px;
+  }
+  .judul-events{
+    color: #000;
+
+    /* Heading/XXL */
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 90% */
+  }
+  .events-body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    height: 582px;
+    width: 100%;
+  }
+  .judul-events-body{
     color: #000;
 
     /* Heading/M */
@@ -39,32 +169,61 @@
     font-weight: 700;
     line-height: 36px; /* 128.571% */
   }
-  .body-event{
-    height: 563px;
+  .isi-events{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 486px;
+    overflow: hidden; /* Hide overflow to create a "viewport" for the slides */
+    position: relative;
+  }
+  .events-carousel {
     display: flex;
     align-items: flex-start;
-    gap: 100px;
+    width: 932px;
+    height: 486px;
+    overflow-x: hidden;
+    transition: transform 0.5s ease-in-out; /* Add a transition for smooth sliding */
   }
-  .image-event{
+  .slide_bawah {
+    display: flex;
+    gap: 32px;
+    transition: transform 0.5s ease-in-out; /* Add a transition for smooth sliding */
+
+  }
+  .slide_atas {
+    display: flex;
+    gap: 32px;
+    transition: transform 0.5s ease-in-out; /* Add a transition for smooth sliding */
+
+  }
+  .catalog-events{
     display: flex;
     padding: 28px 20px;
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    width: 465px;
-    height: 507px;
+    width: 410px;
+    height: 430px;
     background: var(--core-blue-accent, #004AAD);
     box-shadow: 0px 4px 25px 0px rgba(114, 112, 112, 0.25);
+    transition: transform 0.5s ease-in-out; /* Add a transition for smooth sliding */
+
   }
-  .event-text{
+  .image-events{
+    width: 397px;
+    height: 318px;
+  }
+  .detail-events{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    width: 430px;
+    width: 410px;
     height: 80px;
   }
-  .tanggal-event{
+  .tanggal-detail-events{
     color: var(--core-white, #FFF);
     font-family: Poppins;
     font-size: 18px;
@@ -72,7 +231,7 @@
     font-weight: 700;
     line-height: 36px; /* 200% */
   }
-  .nama-event{
+  .judul-detail-events{
     color: var(--core-yellow, #F9B900);
 
     /* Heading/M */
@@ -82,60 +241,33 @@
     font-weight: 700;
     line-height: 36px; /* 128.571% */
   }
-
-  /* Existing styles... */
-
-  .image-slider-container {
-    position: relative;
-    overflow: hidden;
-    width: 1112px;
-  }
-  
-  .image-slider {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .slider-buttons {
-    display: flex;
-    justify-content: space-between;
-    bottom: 10px;
-    margin: 10px 10px 10px 10px;
-    width: 100%;
-  }
-  
-  .prev-button,
-  .next-button {
-    background: var(--core-blue-accent, #004AAD);
-    color: var(--core-white, #FFF);
-    border: none;
-    padding: 10px 20px;
+  .left-button,
+  .right-button{
     cursor: pointer;
   }
-
-  .prev-button {
-    left: 20px; /* Adjust the distance from the left */
+  .whatsapp-button:hover{
+    background: #87CDEE;
   }
-  
-  .next-button {
-    right: 20px; /* Adjust the distance from the right */
+  .daftar-header-button:hover{
+    background: var(--core-blue-accent-hover, #0055A0);
   }
-  
-  /* Additional styles... */
-  
-  
-
+  .daftar-button:hover{
+    background: var(--core-blue-accent-hover, #0055A0);
+  }
+  .float:hover{
+    background: var(--core-blue-accent-hover, #0055A0);
+  }
   @keyframes slide {
     0%, 15%{
-      background-image: url("static/carousel/image1.jpg");
+      background-image: url("static/carousel/header.jpg");
       background-position: 50% 50%;
     }
     20%, 35% {
-      background-image: url("static/carousel/image2.jpg");
+      background-image: url("static/carousel/header 1.jpg");
       background-position: 50% 20%;
     }
     40%, 55%{
-      background-image: url("static/carousel/image3.jpg");
+      background-image: url("static/carousel/header 2.jpg");
       background-position: 50% 50%;
     }
     60%, 75% {
@@ -147,6 +279,7 @@
       background-position: 50% 20%;
     }
   }
+
   .daftar-sekarang{
     display: flex;
     flex-direction: column;
@@ -169,7 +302,7 @@
     width: 771px;
     color: #000;
     text-align: center;
-
+  
     /* Heading/XXL */
     font-family: Poppins;
     font-size: 40px;
@@ -246,7 +379,7 @@
   .text-pendaftaran{
     width: 276px;
     color: #000;
-
+  
     /* Paragraph/M */
     font-family: Poppins;
     font-size: 16px;
@@ -264,7 +397,7 @@
     align-items: center;
     gap: 10px;
     border-radius: 32px;
-    {% comment %} border: 2px solid var(--core-blue-accent, #004AAD); {% endcomment %}
+    border: 2px solid var(--core-blue-accent, #004AAD);
     box-shadow: 0px 2px 6px 0px #4776BB;
   }
   .daftar-button{
@@ -279,37 +412,669 @@
     box-shadow: 0px 2px 6px 0px #4776BB;
   }
   /* Add your styles for the feedback overlay here */
-.feedback-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-}
+  .feedback-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add your styles for the feedback message here */
+  .feedback-message {
+    background-color: #f1f1f1;
+    color: #000;
+    padding: 20px;
+    border-radius: 4px;
+    max-width: 400px;
+  }
+  
+  .close-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #004AAD;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+  }
+  
+  .my-float{
+    margin-top:16px;
+  }
 
-/* Add your styles for the feedback message here */
-.feedback-message {
-  background-color: #f1f1f1;
-  color: #000;
-  padding: 20px;
-  border-radius: 4px;
-  max-width: 400px;
-}
+  .container {
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    letter-spacing: -0.02rem;
+  }
+  
+  .header {
+    box-shadow: 0px 8px 40px 0px rgba(112, 144, 176, 0.2);
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Adjust alignment */
+    gap: 20px;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding */
+  }
+  
+  .logo {
+    min-height: 0;
+    min-width: 0;
+    margin-right: 20px; /* Adjust margin */
+  }
+  
+  .toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px;
+  }
+  
+  .toggle-button button {
+    padding: 8px 16px; /* Adjust padding */
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 32px;
+  }
+  
+  .nav-item-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: medium;
+    line-height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+    padding: 10px 16px; /* Adjust padding */
+  }
+  
+  .nav-item-medium.active {
+    color: blue;
+    border-radius: 32px; /* Add border-radius for active state */
+  }
+  
+  .judul-program{
+    color: var(--core-white, #FFF);
 
-.close-button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #004AAD;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    /* Heading/XXL */
+    text-align: center;
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 90% */
+    position: absolute; /* Set the button as an absolutely positioned element */
+    top: 150px; /* Position the button at the top of the container */
+    display: flex;
+    padding: 12px 20px;
+  }
+
+  @media screen and (max-width: 820px) {
+    .container{
+      align-items: center;
+    }
+    .header {
+      width: 100%;
+      flex-direction: column; /* Stack items in a column on smaller screens */
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+    }
+  
+    .toggle-button {
+      margin: 10px 0px 0px 0px;
+      align-items: center;
+      justify-content: center; /* Center the buttons on smaller screens */
+    }
+    .content-container{
+      height: 823px;
+      flex-shrink: 0;
+      width: 100%;
+      align-items: center;
+
+    }
+    .carousel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--core-gradient, linear-gradient(89deg, rgba(97, 205, 244, 0.50) 53.62%, rgba(61, 157, 218, 0.50) 82.45%, rgba(0, 74, 173, 0.50) 100%));
+      animation: slide 30s infinite;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+    }
+    .content-header{
+      height: 823px;
+      flex-shrink: 0;
+      width: 100%;
+      align-items: center;
+    }
+    .left-content{
+      margin: 10px 0px 0px 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .left-text{
+      margin: 15px 0px 0px 0px;
+      width: 100%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .title{
+      color: #000;
+
+      /* Heading/M */
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 128.571% */
+      width: 320px;
+      text-align: center;
+      margin: 0px 0px 0px 0px;
+    }
+    .left-body{
+      width: 343px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .bottom-image{
+      position: absolute;
+      margin: 636px 1044px 0px -50px;
+      z-index: -1;
+    }
+    .top-image{
+      position: absolute;
+      margin: 686px 1044px 0px -50px;
+      z-index: -1;
+    }
+    .body {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 120px;
+      height: 2376px;
+    }
+    .tentang-sekolah{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+      height: 753px;
+    }
+    .tentangsekolah {
+      color: #000;
+
+      /* Heading/M */
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 128.571% */
+    }
+
+    .centered-image {
+      width: 349.089px;
+      height: 349.089px;
+      flex-shrink: 0;
+    }
+    .isi-tentangsekolah{
+      color: #000;
+      text-align: center;
+      width: 343px;
+
+      /* Paragraph/S */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 257.143% */
+      margin-bottom: 20px;
+    }
+    .tentang-visi-misi{
+      width: 100%;
+    }
+    .visi-misi-tujuan{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+      width: 100%;
+      height: 1523px;
+    }
+    .kurikulum{
+      display: flex;
+      height: 1600px;
+      padding: 40px 82px;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+    .isi-kurikulum{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      width: 100%;
+    }
+    .text-kurikulum{
+      width: 340px;
+    }
+    .learning-obj{
+      height: 482px;
+    }
+    .background-image{
+      width: 100%;
+      height: 315.223px;
+      flex-shrink: 0;
+      top: 65%;
+    }
+    .judul-learning{
+      width: 343px;
+      color: #000;
+      text-align: center;
+
+      /* Heading/M */
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 128.571% */
+    }
+    .container-learning{
+      display: flex;
+      width: 342px;
+      height: 482px;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+    .image-learning{
+      width: 341.802px;
+      height: 350.127px;
+    }
+    .karakter{
+      height: 1640px;
+      margin-bottom: 144px;
+    }
+    .karakter-container{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      height: 1542px;
+    }
+    .isi-karakter{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 42px;
+    }
+    .kolom-karakter{
+      display: flex;
+      width: 340px;
+      height: 346px;
+      padding-bottom: 0px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .header-kolom{
+      display: flex;
+      width: 340px;
+      height: 72px;
+      padding: 20px 0px;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .judul-kolom{
+      width: 297px;
+      flex-shrink: 0;
+
+      color: var(--core-yellow, #F9B900);
+      text-align: center;
+
+      /* Heading/S */
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 150% */
+    }
+    .body-kolom{
+      width: 300px;
+    }
+    .isi-kolom{
+      color: #000;
+
+      /* Paragraph/S */
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px; /* 257.143% */
+    }
+    .events{
+      width: 100%;
+      height: 1174px;
+    }
+    .events-container{
+      width: 100%;
+
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 72px;
+      height: 1174px;
+    }
+    .judul-events{
+      width: 212px;
+      color: #000;
+      text-align: center;
+
+      /* Heading/M */
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 128.571% */
+    }
+    .events-body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .isi-events {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      height: auto; /* Remove fixed height */
+    }
+    .judul-events-body{
+      color: #000;
+
+      /* Heading/S */
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 150% */
+    }
+    .catalog-events{
+      display: flex;
+      padding: 22.414px 16.01px;
+      flex-direction: column;
+      align-items: center;
+      gap: 25.616px;
+      width: 230px;
+      height: 358px;
+      padding: 22.414px 16.01px;
+    }
+    .image-events{
+      width: 230.98px;
+      height: 175.067px;
+    }
+    .detail-events{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6.404px;
+    }
+    .tanggal-detail-events{
+      color: var(--core-white, #FFF);
+      font-family: Poppins;
+      font-size: 14.409px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28.818px; /* 200% */
+    }
+    .judul-detail-events{
+      width: 203.33px;
+      color: var(--core-yellow, #F9B900);
+      text-align: center;
+
+      /* Heading/S */
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 150% */
+    }
+    .left-button, 
+    .right-button{
+      display: none;
+    }
+    .events-carousel {
+      display: flex !important;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      align-items: flex-start;
+      width: 100%;
+      touch-action: pan-y;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      width: 300px;
+    }
+    .slide_bawah,
+    .slide_atas {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+    .carousel-slide {
+      display: flex;
+      flex-wrap: nowrap;
+      transition: transform 0.5s ease-in-out;
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+    }
+    .program{
+      width: 100%;
+      height: 449px;
+      flex-shrink: 0;
+    }
+    .program-container{
+      width: 342px;
+      height: 449px;
+      flex-shrink: 0;
+    }
+    .image-program{
+      width: 342px;
+      height: 449px;
+      flex-shrink: 0;
+    }
+    .judul-program{
+      color: var(--core-white, #FFF);
+      text-align: center;
+
+      /* Heading/M */
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 128.571% */
+    }
+    .fasilitas{
+      display: flex;
+      width: 100%;
+      height: 1367px;
+      padding: 40px 0px;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+    }
+    .header-foto{
+      display: flex;
+      width: 342px;
+      height: 601px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 38px;      
+    }
+    .body-fasilitas{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 60px;
+      width: 341px;
+      height: 702px;
+    }
+    .isi-fasilitas{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      width: 100%;
+      height: auto; /* Remove fixed height */
+    }
+    .tulisan-fasilitas{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      width: 100%;
+      height: 248px;
+    }
+    .image-fasilitas{
+      width: 339px;
+      height: 273.924px;
+    }
+    .float {
+      width: 50px;
+      height: 50px;
+      bottom: 40px;
+      font-size: 22px;
+    }
+    .daftar-sekarang{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 72px;
+      width: 100%;
+      height: 1200px;
+    }
+    .daftar{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 72px;
+      width: 100%;
+      height: 1200px;
+    }
+    .judul-daftar{
+      width: 341px;
+      color: #000;
+      text-align: center;
+
+      /* Heading/M */
+      font-family: Poppins;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px; /* 128.571% */
+    }
+    .body-daftar{
+      display: flex;
+      width: 100%;
+      height: 950px;
+      padding: 32px 8px;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .atas-daftar{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      width: 344px;
+      height: 440px;
+    }
+    .bawah-daftar{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      width: 344px;
+      height: 312px;
+    }
+    .pembayaran-daftar{
+      width: 276px;
+      height: 180px;
+    }
+    .button-daftar{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      width: 252px;
+      height: 152px;
+    }
+
+
+    .header-footer{
+      width: 100%;
+      height: 35px;
+    }
+    .footer{
+      display: flex;
+      height: 634px;
+      padding: 0px 84px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-shrink: 0;
+    }
+    .line{
+      width: 176.011px;
+      height: 1px;
+    }
+  }
+  
+  
 </style>
 <body>
   <div class="container">
@@ -339,98 +1104,103 @@
             <br>BRIGHT SCOPE ISLAMIC SCHOOL Playgroup and kindergarten under The Mentari Edukasi Gemilang foundation is a school with islamic bilingual curriculum to grow the children  Which Has A Vision And Mission Compilation Of  Islamic School-Based Education, Fun active and happy learning method
           </span>
         </div>
-        <a class="daftar-header-button" onclick="scrollToSection('#daftar')"><span class="slide">Daftar Sekarang!</span></a>
+        <a class="daftar-header-button" onclick="scrollToSection('#daftar')"><span class="slide">Register Now!</span></a>
         
       </div>
       
     </div>
     <div class="carousel"></div>
   </div>
-  <div id="tentang-sekolah">
-    <div class="body">
-      <h2 class="tentangsekolah">About School</h2>
-      <img src="https://i.ibb.co/j8pYRF2/Yayasan-logo.png" alt="Image" class="centered-image">
-      <p style = "font-weight: bold">
-        Yayasan MEG membantu optimalisasi tumbuh kembang anak dalam mencapai berbagai tugas perkembangan seperti potensi 
-        <span class="oren">keimanan, emosi, sosial, bahasa, kognitif dan jasmani.</span>
-        Selain itu, Yayasan MEG membantu mengintegerasikan seluruh dimensi perkembangan dan membantu tumbuhkan <span class="oren">karakter Islam.</span>
-      <p>
-    </div>
-  </div>
-  <div class="parent-container">
-    <div class="child-container">
-      <div class="header-container">
-        <img src="https://i.ibb.co/v1H3PDp/lightbulb-outline-24px.png">
-        Visi
+  <div class="body">
+    <div class="tentang-visi-misi">
+      <div id="tentang-sekolah" class="tentang-sekolah">
+        <span class="title-sekolah">About School</span>
+        <img src="static/logo/Yayasan logo.png" alt="Image" class="logo-yayasan">
+        <div class="isi-tentangsekolah" style = "font-weight: bold">
+          Yayasan MEG membantu optimalisasi tumbuh kembang anak dalam mencapai berbagai tugas perkembangan seperti potensi 
+          <span class="oren">keimanan, emosi, sosial, bahasa, kognitif dan jasmani.</span>
+          <br>Selain itu, Yayasan MEG membantu mengintegerasikan seluruh dimensi perkembangan dan membantu tumbuhkan <span class="oren">karakter Islam.</span>
+        </div>
       </div>
-      <div class="body-container">
-          Mendidik individu dengan 
-          <br><span class="oren">integritas</span> dan <span class="oren">keunggulan</span> yang 
-          <br>berwawasan luas di lingkungan
-          <br>tempat belajar yang nyaman 
-          <br>dan bersahabat.
-      </div>
-    </div>
+      <div class="visi-misi-tujuan">
+        <div class="container-vmt">
+          <div class="header-vmt">
+            <img src="static/icon/visi_icon.png" alt="Image" class="logo-visi">
+            <span class="judul-vmt">Visi</span>
+          </div>
+          <div class="body-vmt">
+            Mendidik individu dengan 
+            <span class="oren">integritas</span>
+            dan <span class="oren">keunggulan</span>
+            yang berwawasan luas di lingkungan tempat 
+            belajar yang nyaman dan bersahabat.
+          </div>
+        </div>
 
-    <div class="child-container">
-      <div class="header-container">
-        <img src="https://i.ibb.co/3WbTdfP/border-color-24px.png">
-        Misi
-      </div>
-      <div class="body-container">
-        Sebagai sekolah islam yang 
-        <br>bertaraf internasional berupaya 
-        <br>mencetak generasi yang unggul 
-        <br>dan berpedoman kepada <span class="oren">6 
-        <br>rukun iman</span> dengan dasar <span class="oren">5 
-        <br>rukun islam</span> yang mempunyai 
-        <br>kepastian 1 tujuan (scope) yaitu 
-        <br>surga-Nya Allah SWT.
-      </div>
-    </div>
-    <div class="child-container">
-      <div class="header-container">
-        <img src="https://i.ibb.co/SxXWJQH/place-24px.png">
-        Tujuan
-      </div>
-      <div class="body-container">
-        1. Menjadi sekolah islam <span class="oren">terbaik</span>
-        <br>bertaraf internasional
-        <br>2. Mewujudkan generasi 
+        <div class="container-vmt">
+          <div class="header-vmt">
+            <img src="static/icon/misi_icon.png" alt="Image" class="logo-misi">
+            <span class="judul-vmt">Misi</span>
+          </div>
+          <div class="body-vmt">
+            Sebagai sekolah islam yang 
+            bertaraf internasional berupaya 
+            mencetak generasi yang unggul 
+            dan berpedoman kepada <span class="oren">6 
+            rukun iman</span> dengan dasar <span class="oren">5 
+            rukun islam</span> yang mempunyai 
+            kepastian 1 tujuan (scope) yaitu 
+            surga-Nya Allah SWT.
+          </div>
+        </div>
+
+        <div class="container-vmt">
+          <div class="header-vmt">
+            <img src="static/icon/tujuan_icon.png" alt="Image" class="logo-tujuan">
+            <span class="judul-vmt">Tujuan</span>
+          </div>
+          <div class="body-vmt">
+            1. Menjadi sekolah islam <span class="oren">terbaik</span>
+            bertaraf internasional 
+            <br>2. Mewujudkan generasi 
         <br><span class="oren">berakhlak islam</span>
         <br>3. Mewujudkan generasi yang 
         <br>cinta <span class="oren">Al-Qur'an</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
+
   <div class="kurikulum">
     <h2 class="judul-kurikulum">Curriculum</h2>
     <div class="isi-kurikulum">
       <div class="gambar-kurikulum">
-        <img src="static/kurikulum/Ellipse 6.png" alt="Image">
-        <span class="text-kurikulum">Fun Active Learning</span>
+        <img src="static/kurikulum/fun.png" alt="Image">
+        <span class="text-kurikulum">Fun Active and Happy Learning</span>
       </div>
       <div class="gambar-kurikulum">
-        <img src="static/kurikulum/Ellipse 6 (1).png" alt="Image">
+        <img src="static/kurikulum/doing.png" alt="Image">
         <span class="text-kurikulum">Learning By Doing Method</span>
       </div>
       <div class="gambar-kurikulum" style="margin-right: 0px;">
-        <img src="static/kurikulum/islamic.png" alt="Image">
-        <span class="text-kurikulum">Islamic Bilingual</span>
+        <img src="static/kurikulum/islamic bil.png" alt="Image">
+        <span class="text-kurikulum">Islamic Bilingual Curriculum</span>
       </div>
     </div>
   </div>
 
   <div class="learning-obj">
-      <img class="background-image" src="https://i.ibb.co/XDDc5wM/Vector-1-3.png" alt="Image">
         <div class="container-learning">
           <span class="judul-learning">Bright Scope’s 10 Learning Objectives</span>
-          <img class="image-learning" src="https://i.ibb.co/qm5R0QX/Group-2.png" alt="Image">
+          <img class="background-image" src="static/learning-obj/Vector-1-3.png" alt="Image">
+          <img class="image-learning" src="static/learning-obj/learning obj.png" alt="Image">
         </div>
   </div>
   <div class="karakter">
     <div class="karakter-container">
-      <span class="judul-karakter">Karakter</span>
+      <span class="judul-karakter">Characters</span>
       <div class="isi-karakter">
         <div class="kolom-karakter">
           <div class="header-kolom">
@@ -488,96 +1258,121 @@
     </div>
   </div>
   
-  <div class="event">
-    <div class="event-container">
-      <h2 class="judul-event">Upcoming and Latest Events</h2>
-      <div class="the-event">
-        <span class="upcoming-event">Upcoming Event</span>
-        <div class="body-event">
-          <div class="image-event">
-            <img src="static/event/Tutti Fruity.png" alt="Image">
-            <div class="event-text">
-              <span class="tanggal-event">Saturday, August 12th 2023</span>
-              <span class="nama-event">TUTTI FRUITY PARTY</span>
+  <div class="events">
+    <div class="events-container">
+      <span class="judul-events">Upcoming and Latest Events</span>
+      <div class="events-body">
+        <span class="judul-events-body">Upcoming Events</span>
+        <div class="isi-events">
+          <span class="left-button" onclick="slideLefts()">
+            <img src="static/event/left.png" alt="Image">
+          </span>
+          <div class="events-carousel carousel-slide" id="carousel_atas">
+            <div class="slide_atas">
+              <div class="catalog-events" id="catalog-events-atas">
+                <img class="image-events"src="static/event/tuti.png" alt="Image">
+                <div class="detail-events">
+                  <span class="tanggal-detail-events">Saturday, August 12th 2023</span>
+                  <span class="judul-detail-events">Tutti Fruity Party</span>
+                </div>
+              </div>
+              <div class="catalog-events" id="catalog-events-atas">
+                <img class="image-events"src="static/event/baby.png" alt="Image">
+                <div class="detail-events">
+                  <span class="tanggal-detail-events">Now Open !</span>
+                  <span class="judul-detail-events">Baby School</span>
+                </div>
+              </div>
+              <div class="catalog-events" id="catalog-events-atas">
+                <img class="image-events"src="static/event/trial_class.png" alt="Image">
+                <div class="detail-events">
+                  <span class="tanggal-detail-events">Every Monday - Saturday</span>
+                  <span class="judul-detail-events">Trial Class</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="image-event">
-            <img src="static/event/image 2.png" alt="Image">
-            <div class="event-text">
-              <span class="tanggal-event"></span>
-              <span class="nama-event">Coming Soon</span>
+          <span class="right-button" onclick="slideRights()">
+            <img src="static/event/right.png" alt="Image">
+          </span>
+        </div>
+      </div>
+
+      <div class="events-body">
+        <span class="judul-events-body">Latest Events</span>
+        <div class="isi-events">
+          <span class="left-button" onclick="slideLeft()">
+            <img src="static/event/left.png" alt="Image">
+          </span>
+          <div class="events-carousel carousel-slide" id="carousel_bawah">
+            <div class="slide_bawah" >
+              <div class="catalog-events" id="catalog-events-bawah">
+                <img class="image-events"src="static/event/trial_class.png" alt="Image">
+                <div class="detail-events">
+                  <span class="tanggal-detail-events">Every Monday - Saturday</span>
+                  <span class="judul-detail-events">Trial Class</span>
+                </div>
+              </div>
+              <div class="catalog-events" id="catalog-events-bawah">
+                <img class="image-events"src="static/event/GO.png" alt="Image">
+                <div class="detail-events">
+                  <span class="tanggal-detail-events">Saturday, July 15th 2023</span>
+                  <span class="judul-detail-events">Grand Opening with PizzaHut</span>
+                </div>
+              </div>
+              <div class="catalog-events" id="catalog-events-bawah">
+                <img class="image-events"src="static/event/fundate.png" alt="Image">
+                <div class="detail-events">
+                  <span class="tanggal-detail-events">Saturday, June 17th 2023</span>
+                  <span class="judul-detail-events">Fun Saturday Playdate</span>
+                </div>
+              </div>
             </div>
           </div>
+          <span class="right-button" onclick="slideRight()">
+            <img src="static/event/right.png" alt="Image">
+          </span>
         </div>
       </div>
-      <div class="the-event">
-        <span class="upcoming-event">Latest Event</span>
-        <div class="image-slider-container">
-          <div class="image-slider">
-            <div class="body-event">
-              <div class="image-event">
-                <img src="static/event/trial.png" alt="Image">
-                <div class="event-text">
-                  <span class="tanggal-event">Every Monday - Saturday</span>
-                  <span class="nama-event">Trial Class</span>
-                </div>
-              </div>
-              <div class="image-event">
-                <img src="static/event/GO.png" alt="Image">
-                <div class="event-text">
-                  <span class="tanggal-event">Saturday, July 15th 2023</span>
-                  <span class="nama-event">Grand Opening with Pizza Hut</span>
-                </div>
-              </div>
-              <div class="image-event">
-                <img src="static/event/fundate.png" alt="Image">
-                <div class="event-text">
-                  <span class="tanggal-event">Saturday, June 17th 2023</span>
-                  <span class="nama-event">Fun Saturday Playdate</span>
-                </div>
-              </div>
-            </div>
-          </div>        
-        </div>
-      </div>
-    </div>
-    <div class="slider-buttons">
-      <button class="prev-button" onclick="changeSlide(-1)">Previous</button>
-      <button class="next-button" onclick="changeSlide(1)">Next</button>
     </div>
   </div>
 
+
   <div class="program">
     <div class="program-container">
-      <img class="image-program" src="https://i.ibb.co/yyy91cg/Frame-42.png" alt="Image">
-      <a class="program-button" href="/program"><span class="slide">Lihat program kami</span></a>
+      <picture>
+        <source media="(max-width: 820px)" srcset="static/program/home_res.png">
+        <img class="image-program" src="static/program/home.png" alt="Image">
+      </picture>
+      <span class="judul-program">Learn Our Programs!</span>
+      <a class="program-button" href="/program"><span class="slide">Explore Our Programs</span></a>
     </div>
   </div>
 
   <div class="fasilitas">
     <div class="header-foto">
-      <img src="https://i.ibb.co/MMpx2YG/Frame-41.png" alt="Image">
+      <img src="static/Facility/home 2.png" alt="Image">
+      <img src="static/Facility/home 3.png" alt="Image">
+      <img src="static/Facility/home 4.png" alt="Image">
     </div>
     <div class="body-fasilitas">
       <div class="isi-fasilitas">
         <div class="tulisan-fasilitas">
-          <span class="judul-fasilitas">Fasilitas Kami</span>
+          <span class="judul-fasilitas">Our Facilities</span>
           <span class="isi-judul-fasilitas">
-            Kami berkomitmen untuk menyediakan 
-            fasilitas terbaik guna memenuhi kebutuhan 
-            si cilik. Fasilitas kami dilengkapi mulai 
-            dari ruang kelas, taman bermain, dan office.   
+            We are committed to providing the best facilities to meet the needs of the little ones. 
+            Our facilities are equipped with classrooms, playgrounds, and offices.  
           </span>
         </div>
-        <a class="fasilitas-button" href="/fasilitas"><span class="slide">Lihat fasilitas</sapn></a>
+        <a class="fasilitas-button" href="/fasilitas"><span class="slide">Explore Our Facilities</sapn></a>
       </div>
-      <img src="https://i.ibb.co/VvV3TJ8/IMG-0143-1.png" alt="Image">
+      <img class="image-fasilitas" src="static/Facility/home.png" alt="Image">
     </div>
   </div>
    
   <div class="daftar-sekarang" id="daftar">
     <div class="daftar">
-      <span class="judul-daftar">Proses Pendaftaran Brightscope Islamic School</span>
+      <span class="judul-daftar">Registration Process at Brightscope Islamic School</span>
       <div class="body-daftar">
         <div class="atas-daftar">
           <div class="hubungi-daftar">
@@ -604,19 +1399,19 @@
           </div>
         </div>
         <div class="button-daftar">
-          <a href="https://wa.me/081292058377" class="whatsapp-button">
+          <a href="https://wa.me/+6281292058377" class="whatsapp-button">
             <img src="static/daftar/Frame 127.png" alt="Button Image">
           </a>
           <span href="/" class="daftar-button" onclick="showFeedback()">
-            <span class="slide">Daftar Sekarang</span>
+            <span class="slide">Register Now</span>
           </span>
-          {% comment %} <div id="feedback-message" class="feedback-message"></div> {% endcomment %}
         </div>
       </div>
     </div>
 
   </div>
 
+  
   <div id="bawah">
     <div class="header-footer"></div>
     <div class="footer">
@@ -628,7 +1423,7 @@
           <span class="telp">Telp: +6281292058377</span>
           <span class="email">Email: brightscope.islamicschool@gmail.com</span>
           <span class="email">admin@brightscope.sch.id</span>
-          <span class="instagram">Instagram: @bright.scope</span>
+          <span class="instagram">Instagram: @bright.scopeschool</span>
         </div>
       </div>
       <div class="line"></div>
@@ -640,9 +1435,9 @@
       </div>
     </div>
   </div>
-  <a href="https://wa.me/081292058377" class="float" target="_blank">
+  <a href="https://wa.me/+6281292058377" class="float" target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
-    </a>
+  </a>
   <!-- Feedback modal overlay -->
   <div id="feedback-overlay" class="feedback-overlay">
     <div id="feedback-message" class="feedback-message">
@@ -651,7 +1446,9 @@
       <button class="close-button" onclick="hideFeedback()">Close</button>
     </div>
   </div>
+
 </body>
+
 
 <script>
   function navigateTo(url) {
@@ -689,36 +1486,64 @@
       }
     }
   }
-  const imageSlider = document.querySelector('.image-slider');
-  const prevButton = document.querySelector('.prev-button');
-  const nextButton = document.querySelector('.next-button');
 
-  let currentIndex = 0;
-  const slideWidth = 304; // Width of each "image-event" container including padding and margin
-  const slidesPerPage = 2;
-  const totalSlides = document.querySelectorAll('.image-event').length;
-  console.log(totalSlides);
+   // Initialize variables
+   const carouselContainer_bawah = document.querySelector('.slide_bawah');
+   const catalogEvents_bawah = carouselContainer_bawah.querySelectorAll('#catalog-events-bawah');
+   let slideWidth_bawah = 482; // Width of each slide
+   let currentSlide_bawah = 0;
+ 
+   // Function to slide left
+   function slideLeft() {
+     if (currentSlide_bawah > 0) {
+       currentSlide_bawah--;
+       updateCarousel_bawah();
+     }
+   }
+ 
+   // Function to slide right
+   function slideRight() {
+     if (currentSlide_bawah < catalogEvents_bawah.length - 2) {
+       currentSlide_bawah++;
+       updateCarousel_bawah();
+     }
+   }
+ 
+   // Function to update carousel position
+   function updateCarousel_bawah() {
+     const offset = -currentSlide_bawah * slideWidth_bawah;
+     carouselContainer_bawah.style.transform = `translateX(${offset}px)`;
+   }
 
-  function changeSlide(direction) {
-    
-    currentIndex = currentIndex + -direction * slidesPerPage;
-    
-    console.log(currentIndex);
-    if (currentIndex < 0) {
-      currentIndex = totalSlides - 1;
-      console.log("sini");
-    } else if (currentIndex >= totalSlides) {
-      currentIndex = 0;
-      console.log("sana");
+   // Initialize variables
+  const carouselContainer = document.querySelector('.slide_atas');
+  const catalogEvents = carouselContainer.querySelectorAll('#catalog-events-atas');
+  let slideWidth = 482; // Width of each slide
+  let currentSlide = 0;
+
+  // Function to slide left
+  function slideLefts() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateCarousel();
     }
-    
-    const pindah = currentIndex * slideWidth;
-    imageSlider.style.transform = `translateX(${-pindah}px)`;
   }
-    
+
+  // Function to slide right
+  function slideRights() {
+    if (currentSlide < catalogEvents.length - 2) {
+      currentSlide++;
+      updateCarousel();
+    }
+  }
+
+  // Function to update carousel position
+  function updateCarousel() {
+    const offset = -currentSlide * slideWidth;
+    carouselContainer.style.transform = `translateX(${offset}px)`;
+  }
+
   
-  prevButton.addEventListener('click', () => changeSlide(-1));
-  nextButton.addEventListener('click', () => changeSlide(1));
 
   function showFeedback() {
     // Get the feedback overlay and message elements
@@ -742,7 +1567,95 @@
     feedbackMessage.style.display = "none";
   }
   
-  
+  // Swipeable Carousel for Bottom Section
+  const carouselContainerBottom = document.querySelector('.slide_bawah');
+  const catalogEventsBottom = carouselContainerBottom.querySelectorAll('#catalog-events-bawah');
+  let slideWidthBottom = 300; // Initial width of each slide
+  let currentSlideBottom = 0;
+  let touchStartXBottom = 0;
+  let touchEndXBottom = 0;
+
+  function slideLeftBottom() {
+    if (currentSlideBottom > 0) {
+      currentSlideBottom--;
+      updateCarouselBottom();
+    }
+  }
+
+  function slideRightBottom() {
+    if (currentSlideBottom < catalogEventsBottom.length - 1) {
+      currentSlideBottom++;
+      updateCarouselBottom();
+    }
+  }
+
+  function updateCarouselBottom() {
+    const offset = -currentSlideBottom * slideWidthBottom;
+    carouselContainerBottom.style.transform = `translateX(${offset}px)`;
+  }
+
+  carouselContainerBottom.addEventListener('touchstart', e => {
+    touchStartXBottom = e.touches[0].clientX;
+  });
+
+  carouselContainerBottom.addEventListener('touchend', e => {
+    touchEndXBottom = e.changedTouches[0].clientX;
+    handleSwipeBottom();
+  });
+
+  function handleSwipeBottom() {
+    if (touchStartXBottom - touchEndXBottom > 50) {
+      slideRightBottom();
+    } else if (touchEndXBottom - touchStartXBottom > 50) {
+      slideLeftBottom();
+    }
+  }
+
+  // Swipeable Carousel for Top Section
+  const carouselContainerTop = document.querySelector('.slide_atas');
+  const catalogEventsTop = carouselContainerTop.querySelectorAll('#catalog-events-atas');
+  let slideWidthTop = 300; // Initial width of each slide
+  let currentSlideTop = 0;
+  let touchStartXTop = 0;
+  let touchEndXTop = 0;
+
+  function slideLeftTop() {
+    if (currentSlideTop > 0) {
+      currentSlideTop--;
+      updateCarouselTop();
+    }
+  }
+
+  function slideRightTop() {
+    if (currentSlideTop < catalogEventsTop.length - 1) {
+      currentSlideTop++;
+      updateCarouselTop();
+    }
+  }
+
+  function updateCarouselTop() {
+    const offset = -currentSlideTop * slideWidthTop;
+    carouselContainerTop.style.transform = `translateX(${offset}px)`;
+  }
+
+  carouselContainerTop.addEventListener('touchstart', e => {
+    touchStartXTop = e.touches[0].clientX;
+  });
+
+  carouselContainerTop.addEventListener('touchend', e => {
+    touchEndXTop = e.changedTouches[0].clientX;
+    handleSwipeTop();
+  });
+
+  function handleSwipeTop() {
+    if (touchStartXTop - touchEndXTop > 50) {
+      slideRightTop();
+    } else if (touchEndXTop - touchStartXTop > 50) {
+      slideLeftTop();
+    }
+  }
+
+
 </script>
 
 </html>

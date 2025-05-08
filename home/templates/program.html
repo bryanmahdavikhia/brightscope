@@ -3,84 +3,475 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brightscope</title>
+  <link rel="icon" href="static/logo/logo brightscope.png" type="image/png">
+  <title>Program | Bright Scope Islamic School</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="static\style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <style>
+  .float:hover{
+    background: var(--core-blue-accent-hover, #0055A0);
+  }
+  .container{
+      margin-bottom: 100px;
+  }
+  .toggle-button{
+      margin-right: auto;
+  }
+  .nav-item-medium.active {
+      color: #004aad;
+  }
+  .container-learning{
+      gap: 100px;
+  }
+  .kegiatan-siswa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 657px;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .kegiatan-siswa-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    height: 657px;
+    width: 1150px;
+  }
+  .judul-kegiatan{
+    color: #000;
+
+    /* Heading/XXL */
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 90% */
+  }
+  .content-kegiatan{
+    display: flex;
+    width: 1150px;
+    height: 521px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .content-kegiatan-container{
+    height: 231px;
+    width: 1023px;
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+  }
+  .image-kegiatan{
+    position: relative;
+    display: flex;
+    width: 317px;
+    height: 230.62px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(138, 137, 137, 0.25);
+  }
+  .hidden-kegiatan{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Hide the other div by default */
+  }
+  .image-kegiatan:hover .hidden-kegiatan {
+    display: inline-flex;
+    height: 232px;
+    width: 166px;
+    padding: 0px 76px 0px 77px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--core-blue-accent, #004AAD);
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px 0px rgba(138, 137, 137, 0.25);
+  }
+  .tulisan-kegiatan{
+    color: #F9B900;
+
+    /* Heading/M */
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%; /* Make sure the container has a fixed height */
+  }
+  .course{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 744px;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .course-container{
+    display: flex;
+    width: 1150px;
+    height: 744px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .course-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 670px;
+    height: 88px;
+  }
+  .judul-course{
+    color: #000;
+
+    /* Heading/XXL */
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 90% */
+  }
+  .subjudul-course{
+    color: #000;
+
+    /* Paragraph/L */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 200% */
+  }
+  .course-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    width: 1040px;
+    height: 616px;
+  }
+  .course-atas{
+    display: flex;
+    align-items: flex-start;
+    gap: 31px;
+    width: 1040px;
+    height: 276px;
+  }
+  .course-bawah{
+    display: flex;
+    align-items: flex-start;
+    gap: 31px;
+    width: 683px;
+    height: 276px;
+  }
+  .the-course{
+    position: relative;
+    width: 246px;
+    height: 36px;
+    display: flex;
+    padding: 120px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--core-blue-accent, #004AAD);
+  }
+  .nama-course{
+    color: var(--core-yellow, #F9B900);
+    text-align: center;
+
+    /* Heading/M */
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+  }
+  .hidden-course{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 246px;
+    height: 36px;
+    display: none;
+  }
+  .the-course:hover .hidden-course {
+    display: flex;
+    width: 246px;
+    height: 76px;
+    padding: 100px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    background: #FFF;
+    border-radius: 20px;
+    border: 2px solid var(--core-blue-accent, #004AAD);
+  }
+  .tulisan-course{
+    color: #000;
+    text-align: center;
+
+    /* Paragraph/L */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 200% */
+  }
+  .container {
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    letter-spacing: -0.02rem;
+  }
+  
+  .header {
+    box-shadow: 0px 8px 40px 0px rgba(112, 144, 176, 0.2);
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between; /* Adjust alignment */
+    gap: 20px;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding */
+  }
+  
+  .logo {
+    min-height: 0;
+    min-width: 0;
+    margin-right: 20px; /* Adjust margin */
+  }
+  
+  .toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px;
+  }
+  
+  .toggle-button button {
+    padding: 8px 16px; /* Adjust padding */
+    border: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 32px;
+  }
+  
+  .nav-item-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: medium;
+    line-height: 36px;
+    flex-shrink: 0;
+    cursor: pointer;
+    padding: 10px 16px; /* Adjust padding */
+  }
+  
+  .nav-item-medium.active {
+    color: blue;
+    border-radius: 32px; /* Add border-radius for active state */
+  }
+  
+  @media screen and (max-width: 768px) {
     .container{
-        margin-bottom: 100px;
+      align-items: center;
     }
-    .toggle-button{
-        margin-right: auto;
+    .header {
+      width: 100%;
+      flex-direction: column; /* Stack items in a column on smaller screens */
+      align-items: center;
+      gap: 10px;
+      margin: 0;
     }
-    .nav-item-medium.active {
-        color: #004aad;
+  
+    .toggle-button {
+      margin: 10px 0px 0px 0px;
+      align-items: center;
+      justify-content: center; /* Center the buttons on smaller screens */
     }
-    .container-learning{
-        gap: 100px;
-    }
-    .kegiatan{
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        position: relative;
-        width: 100%;
-        margin-bottom: 200px;
-    }
+  }
+  
 </style>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
-            <div class="toggle-button">
-                <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
-                <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
-            </div>
-            <div class="nav-item-medium" onclick="navigateTo('/')">Beranda</div>
-            <div class="nav-item-medium" onclick="navigateTo('/')">Tentang Kami</div>
-            <div class="nav-item-medium active" onclick="navigateTo('/program')">Program</div>
-            <div class="nav-item-medium" onclick="navigateTo('/fasilitas')">Fasilitas</div>
-            <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Kontak</div>
+  <div class="container">
+    <div class="header">
+      <img src="https://file.rendit.io/n/pPAZtaN2egMyNbU76TRJ.svg" alt="Logo" class="logo">
+      <div class="toggle-button">
+        <button href="/" id="englishButton" class="active" onclick="toggleLanguage('english')">English</button>
+        <button href="/" id="indonesianButton" onclick="toggleLanguage('indonesian')">Indonesian</button>
+      </div>
+      <div class="nav-item-medium" onclick="navigateTo('/')">Home</div>
+      <div class="nav-item-medium" onclick="navigateTo('/')">About School</div>
+      <div class="nav-item-medium active" onclick="navigateTo('/program')">Program</div>
+      <div class="nav-item-medium" onclick="navigateTo('/fasilitas')">Facility</div>
+      <div class="nav-item-medium" onclick="scrollToSection('#bawah')">Contact</div>
+    </div>
+  </div>
+
+  <div class="learning-obj">
+      <img class="background-image" src="static/learning-obj/Vector-1-3.png" alt="Image">
+        <div class="container-learning">
+          <span class="judul-learning">Our Program</span>
+          <img class="image-program" src="static/program/prog.png" alt="Image">
         </div>
-    </div>
-    <div class="learning-obj">
-        <img class="background-image" src="https://i.ibb.co/XDDc5wM/Vector-1-3.png" alt="Image">
-          <div class="container-learning">
-            <span class="judul-learning">Program Kami</span>
-            <img class="image-program" src="https://i.ibb.co/GRx1HPs/Frame-59-1.png" alt="Image">
-          </div>
-    </div>
-    <div class="kegiatan">
-        <img class="body-fasilitas-image" src="https://i.ibb.co/KFBnhcH/Group-4-1.png">
-    </div>
-    <div class="kegiatan">
-        <img class="background-image" src="https://i.ibb.co/XDDc5wM/Vector-1-3.png" alt="Image">
-        <img class="body-fasilitas-image" src="https://i.ibb.co/54TpcKX/Group-4-2.png">
-    </div>
-    <div id="bawah">
-        <div class="header-footer"></div>
-        <div class="footer">
-          <img class="footer-image" src="https://i.ibb.co/wC1Mptc/Brightscope-logo-1.png" alt="Image">
-          <div class="line"></div>
-          <div class="hubungi">
-            <span class="judul-hubungi">Hubungi Kami</span>
-            <div class="isi-hubungi">
-              <span class="telp">Telp: +6281292058377</span>
-              <span class="email">Email: brightscope.islamicschool@gmail.com</span>
-              <span class="instagram">Instagram: @bright.scope</span>
+  </div>
+
+  <div class="kegiatan-siswa">
+    <div class="kegiatan-siswa-container">
+      <span class="judul-kegiatan">Student Activities</span>
+      <div class="content-kegiatan">
+        <div class="content-kegiatan-container" >
+
+          <div class="image-kegiatan">
+            <img src="static/program/Market Day.png" alt="Image">
+            <div class="hidden-kegiatan">
+              <div class="tulisan-kegiatan">Market Day</div>
             </div>
           </div>
-          <div class="line"></div>
-          <div class="alamat">
-            <span class="judul-alamat">Alamat</span>
-            <div class="isi-alamat">
-              <span class="isi-judul-alamat">Ruko The Boulevard No,1, Jakarta Garden City, Jakarta Timur, 13910</span>
+          
+          <div class="image-kegiatan">
+            <img src="static/program/Cooking Class.png" alt="Image">
+            <div class="hidden-kegiatan">
+              <div class="tulisan-kegiatan">Cooking Class</div>
+            </div>
+          </div>
+
+          <div class="image-kegiatan">
+            <img src="static/program/End Year Performance.png" alt="Image">
+            <div class="hidden-kegiatan">
+              <div class="tulisan-kegiatan">End Year Performance</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="content-kegiatan-container">
+          <div class="image-kegiatan">
+            <img src="static/program/Field Trip.png" alt="Image">
+            <div class="hidden-kegiatan">
+              <div class="tulisan-kegiatan">Field Trip</div>
+            </div>
+          </div>
+          <div class="image-kegiatan">
+            <img src="static/program/Creativity Day.png" alt="Image">
+            <div class="hidden-kegiatan">
+              <div class="tulisan-kegiatan">Creativity Day</div>
+            </div>
+          </div>
+          <div class="image-kegiatan">
+            <img src="static/program/Science Fair.png" alt="Image">
+            <div class="hidden-kegiatan">
+              <div class="tulisan-kegiatan">Science Fair</div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="course">
+    <div class="course-container">
+      <div class="course-title">
+        <span class="judul-course">Our Courses Program</span>
+        <span class="subjudul-course">The program is open to the public and can be attended by all children!</span>
+      </div>
+      <div class="course-content">
+        <div class="course-atas">
+          <div class="the-course">
+            <span class="nama-course">Painting/Melukis</span>
+            <div class="hidden-course">
+              <span class="tulisan-course">
+                The program is open to children aged 2 to 7 years old.
+              </span>
+            </div>
+          </div>
+          <div class="the-course">
+            <span class="nama-course">Quranic</span>
+            <div class="hidden-course">
+              <span class="tulisan-course">
+                The program is open to children aged 2 to 15 years old.
+              </span>
+            </div>
+          </div>
+          <div class="the-course">
+            <span class="nama-course">Robotics</span>
+            <div class="hidden-course">
+              <span class="tulisan-course">
+                The program is open to children aged 2 to 7 years old.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="course-bawah">
+          <div class="the-course">
+            <span class="nama-course">Sensory</span>
+            <div class="hidden-course">
+              <span class="tulisan-course">
+                The program is open to children aged 2 to 4 years old.
+              </span>
+            </div>
+          </div>
+          <div class="the-course">
+            <span class="nama-course">Phonic/Math</span>
+            <div class="hidden-course">
+              <span class="tulisan-course">
+                The program is open to children aged 2 to 7 years old.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="bawah">
+    <div class="header-footer"></div>
+    <div class="footer">
+      <img class="footer-image" src="https://i.ibb.co/wC1Mptc/Brightscope-logo-1.png" alt="Image">
+      <div class="line"></div>
+      <div class="hubungi">
+        <span class="judul-hubungi">Hubungi Kami</span>
+        <div class="isi-hubungi">
+          <span class="telp">Telp: +6281292058377</span>
+          <span class="email">Email: brightscope.islamicschool@gmail.com</span>
+          <span class="email">admin@brightscope.sch.id</span>
+          <span class="instagram">Instagram: @bright.scopeschool</span>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="alamat">
+        <span class="judul-alamat">Alamat</span>
+        <div class="isi-alamat">
+          <span class="isi-judul-alamat">Ruko The Boulevard No,1, Jakarta Garden City, Jakarta Timur, 13910</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="https://wa.me/+6281292058377" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
 </body>
 
 <script>
@@ -99,15 +490,24 @@
     function toggleLanguage(language) {
       var englishButton = document.getElementById("englishButton");
       var indonesianButton = document.getElementById("indonesianButton");
-    
+  
+      var confirmed = false;
       if (language === "english") {
-        englishButton.classList.add("active");
-        indonesianButton.classList.remove("active");
-        // Code to switch to English language
+        confirmed = window.confirm("Sorry, this feature is still under development.");
       } else if (language === "indonesian") {
-        indonesianButton.classList.add("active");
-        englishButton.classList.remove("active");
-        // Code to switch to Indonesian language
+        confirmed = window.confirm("Mohon maaf, fitur ini masih dalam tahap pengembangan.");
+      }
+  
+      if (confirmed) {
+        if (language === "english") {
+          englishButton.classList.add("active");
+          indonesianButton.classList.remove("active");
+          // Code to switch to English language
+        } else if (language === "indonesian") {
+          indonesianButton.classList.add("active");
+          englishButton.classList.remove("active");
+          // Code to switch to Indonesian language
+        }
       }
     }
     
